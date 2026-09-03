@@ -20,6 +20,7 @@ import RoutePanel, { type SheetState } from '@/components/RoutePanel';
 import EditorPanel from '@/components/EditorPanel';
 import PlacePicker, { type Field } from '@/components/PlacePicker';
 import TopBar from '@/components/TopBar';
+import InstallButton from '@/components/InstallButton';
 import * as s from './App.css';
 
 /** 편집 모드는 주소에 남겨 둔다 — 새로고침해도 하던 일이 이어진다. */
@@ -460,6 +461,13 @@ const App = () => {
         onStopGuide={stopGuide}
       />
 
+      <InstallButton
+        mode={install.mode}
+        install={onInstall}
+        /* 상단 띠가 그 자리를 쓰는 동안에는 비켜 준다. */
+        blocked={guiding || picking !== null}
+      />
+
       <RoutePanel
         graph={graph}
         from={from}
@@ -473,7 +481,6 @@ const App = () => {
         shortcutCount={shortcutCount}
         geo={{ ...geo, start: useHereAsOrigin }}
         editing={editing}
-        install={{ ...install, install: onInstall }}
         progress={progress}
         accuracy={liveAccuracy}
         simulator={simulating ? simulator : null}

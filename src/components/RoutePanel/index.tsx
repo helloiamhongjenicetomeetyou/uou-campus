@@ -48,7 +48,6 @@ interface Props {
   shortcutCount: number;
   geo: Geo;
   editing: boolean;
-  install: { mode: 'none' | 'prompt' | 'ios'; install: () => void };
   /** 걷는 동안의 진행 상황. 위치를 켜지 않았으면 null. */
   progress: RouteProgress | null;
   /** 현위치의 오차 반경(m). 시뮬레이터를 쓰면 가짜 값이 온다. */
@@ -79,8 +78,6 @@ const GEO_MESSAGE: Record<string, string> = {
   failed: '현위치를 못 찾았습니다',
 };
 
-const IOS_HINT = '사파리 아래 공유 버튼 → 「홈 화면에 추가」';
-
 /** 이만큼 끌면 접거나 펴는 뜻으로 본다. 그 안쪽은 그냥 누른 것으로 친다. */
 const DRAG_SNAP = 24;
 
@@ -97,7 +94,6 @@ const RoutePanel = ({
   shortcutCount,
   geo,
   editing,
-  install,
   progress,
   accuracy,
   simulator,
@@ -115,7 +111,6 @@ const RoutePanel = ({
   onStartGuide,
   onStopGuide,
 }: Props) => {
-  const [iosHint, setIosHint] = useState(false);
   const handleRef = useRef<HTMLDivElement>(null);
   const drag = useRef<number | null>(null);
 
@@ -274,34 +269,15 @@ const RoutePanel = ({
       <div className={s.body}>
         <header className={s.header}>
           <h1 className={s.title}>울산대 캠퍼스 길찾기</h1>
-          <div className={s.headerActions}>
-            {install.mode !== 'none' && (
-              <button
-                type="button"
-                className={s.install}
-                onClick={() =>
-                  install.mode === 'prompt'
-                    ? install.install()
-                    : setIosHint((was) => !was)
-                }
-                aria-expanded={install.mode === 'ios' ? iosHint : undefined}
-              >
-                앱 설치
-              </button>
-            )}
-            <button
-              type="button"
-              className={editing ? s.editOn : s.edit}
-              onClick={onToggleEdit}
-            >
-              {editing ? '편집 끄기' : '편집'}
-            </button>
-          </div>
+          {/* 설치 단추는 지도 오른쪽 위에 따로 있다 — InstallButton. */}
+          <button
+            type="button"
+            className={editing ? s.editOn : s.edit}
+            onClick={onToggleEdit}
+          >
+            {editing ? '편집 끄기' : '편집'}
+          </button>
         </header>
-
-        {install.mode === 'ios' && iosHint && (
-          <p className={s.installHint}>{IOS_HINT}</p>
-        )}
 
         {/*
          * 폰에서는 칸을 누르면 전체 화면 목록이 뜬다. 좁은 시트 안에 여덟 줄

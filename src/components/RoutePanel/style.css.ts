@@ -256,8 +256,6 @@ export const header = style([
 
 export const title = style([font.appTitle, { fontSize: '17px' }]);
 
-export const headerActions = style([flex.VERTICAL, { gap: '6px' }]);
-
 export const edit = style([
   font.caption,
   {
@@ -277,30 +275,6 @@ export const editOn = style([
     backgroundColor: theme.warnSoft,
     color: theme.warn,
     ':hover': { color: theme.warn, borderColor: theme.warn },
-  },
-]);
-
-export const install = style([
-  font.caption,
-  {
-    padding: '5px 10px',
-    borderRadius: layout.radius.pill,
-    border: `1px solid ${theme.accent}`,
-    backgroundColor: theme.accentSoft,
-    color: theme.accent,
-    whiteSpace: 'nowrap',
-
-    ':hover': { backgroundColor: theme.accent, color: theme.onAccent },
-  },
-]);
-
-export const installHint = style([
-  font.caption,
-  {
-    padding: `8px ${spacing.md}`,
-    borderBottom: `1px solid ${theme.outline}`,
-    backgroundColor: theme.accentSoft,
-    color: theme.accent,
   },
 ]);
 
