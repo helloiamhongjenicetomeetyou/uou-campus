@@ -10,22 +10,17 @@ const gray = {
   0: '#FFFFFF',
 } as const;
 
-/** 학부 로고 색. */
-const series = {
-  ict: '#00A663',
-  it: '#007A4D',
-} as const;
-
 const theme = {
   gray,
-  series,
 
   background: gray[50],
   surface: gray[0],
   track: gray[100],
 
-  accent: '#00A663',
-  accentSoft: '#E6F6EF',
+  /** 울산대 CI 그린. scripts/uou-logo.svg 에서 그대로 뽑은 값이다. */
+  accent: '#16A152',
+  /** 위 색을 흰 바탕에 10% 로 얹은 톤. */
+  accentSoft: '#E8F6EE',
   onAccent: '#FFFFFF',
 
   warn: '#B45309',

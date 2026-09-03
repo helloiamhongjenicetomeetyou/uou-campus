@@ -9,8 +9,12 @@
   "display": "standalone",
   "orientation": "any",
   "background_color": "#F8F9FB",
-  "theme_color": "#00A663",
-  "categories": ["navigation", "education", "utilities"],
+  "theme_color": "#16A152",
+  "categories": [
+    "navigation",
+    "education",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "/icon-192.png",
