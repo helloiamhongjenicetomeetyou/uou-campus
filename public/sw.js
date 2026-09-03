@@ -9,7 +9,7 @@
  * 껍데기만 미리 담고 나머지는 처음 받을 때 담는다.
  */
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL = `campus-shell-${VERSION}`;
 const ASSETS = `campus-assets-${VERSION}`;
 const TILES = `campus-tiles-${VERSION}`;
@@ -66,8 +66,10 @@ const handleNavigation = async (request) => {
   }
 };
 
-/** 빌드 산출물: 이름에 해시가 붙어 바뀌지 않는다. 있으면 그대로 쓴다. */
-const handleAsset = async (request) => {
+/**
+ * 빌드 산출물: 이름에 해시가 붙어 내용이 바뀌면 이름도 바뀐다. 있으면 그대로 쓴다.
+ */
+const handleImmutable = async (request) => {
   const cache = await caches.open(ASSETS);
   const hit = await cache.match(request);
   if (hit) return hit;
@@ -75,6 +77,27 @@ const handleAsset = async (request) => {
   const fresh = await fetch(request);
   if (fresh.ok) cache.put(request, fresh.clone());
   return fresh;
+};
+
+/**
+ * 이름이 그대로인 파일 — 매니페스트, 아이콘.
+ *
+ * 이쪽까지 캐시 우선으로 잡으면 한 번 담긴 값이 영영 안 바뀐다. 실제로 강조색을
+ * 고쳐 올렸는데 화면은 새 색, 매니페스트만 옛 색으로 남는 일이 있었다.
+ * 있으면 바로 내주되 뒤에서 새로 받아 두어 다음 방문부터 최신이 되게 한다.
+ */
+const handleRevalidate = async (request) => {
+  const cache = await caches.open(ASSETS);
+  const hit = await cache.match(request);
+
+  const update = fetch(request)
+    .then((fresh) => {
+      if (fresh.ok) cache.put(request, fresh.clone());
+      return fresh;
+    })
+    .catch(() => hit ?? Response.error());
+
+  return hit ?? update;
 };
 
 /**
@@ -123,6 +146,10 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.origin === self.location.origin) {
-    event.respondWith(handleAsset(request));
+    event.respondWith(
+      url.pathname.startsWith('/assets/')
+        ? handleImmutable(request)
+        : handleRevalidate(request),
+    );
   }
 });
