@@ -67,10 +67,13 @@ const nameOf = (graph: CampusGraph, id: string) =>
   graph.nodes.get(id)?.name ?? '';
 
 /**
- * 길목에는 이름이 없다. 그래서 꺾는 자리 근처의 건물을 찾아 표지로 삼는다.
+ * 길목에는 이름이 없다. 그래서 근처의 건물을 찾아 표지로 삼는다.
  * "왼쪽으로" 보다 "아산도서관 앞에서 왼쪽으로" 가 훨씬 따라가기 쉽다.
+ *
+ * 현위치를 붙인 자리를 부를 때도 같은 표지를 쓴다 — 기숙사 앞에 서 있는데
+ * 화면에 '현위치 근처' 라고만 떠 있으면, 앱이 나를 찾은 것인지 알 수가 없다.
  */
-const landmarkNear = (graph: CampusGraph, at: LatLng): string => {
+export const landmarkNear = (graph: CampusGraph, at: LatLng): string => {
   let best: { name: string; meters: number } | null = null;
   for (const place of graph.places) {
     const meters = distance(at, place);

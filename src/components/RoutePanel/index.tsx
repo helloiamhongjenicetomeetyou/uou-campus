@@ -51,6 +51,8 @@ interface Props {
   install: { mode: 'none' | 'prompt' | 'ios'; install: () => void };
   /** 걷는 동안의 진행 상황. 위치를 켜지 않았으면 null. */
   progress: RouteProgress | null;
+  /** 현위치의 오차 반경(m). 시뮬레이터를 쓰면 가짜 값이 온다. */
+  accuracy: number | null;
   simulator: React.ComponentProps<typeof Progress>['simulator'];
   /** 지도가 패널에 가린 만큼을 피해 캠퍼스를 맞추려고 크기를 재 간다. */
   panelRef: RefObject<HTMLElement | null>;
@@ -71,15 +73,13 @@ interface Props {
 
 const GEO_MESSAGE: Record<string, string> = {
   locating: '현위치를 찾는 중입니다',
+  coarse: '아직 어림한 자리입니다 — 다듬는 중',
   denied: '위치 권한이 막혀 있습니다',
   unsupported: '이 브라우저는 위치를 못 씁니다',
   failed: '현위치를 못 찾았습니다',
 };
 
 const IOS_HINT = '사파리 아래 공유 버튼 → 「홈 화면에 추가」';
-
-/** 시뮬레이터가 흔드는 폭에 맞춘 가짜 오차 반경(m). */
-const SIMULATED_ACCURACY = 6;
 
 /** 이만큼 끌면 접거나 펴는 뜻으로 본다. 그 안쪽은 그냥 누른 것으로 친다. */
 const DRAG_SNAP = 24;
@@ -99,6 +99,7 @@ const RoutePanel = ({
   editing,
   install,
   progress,
+  accuracy,
   simulator,
   panelRef,
   phone,
@@ -376,6 +377,16 @@ const RoutePanel = ({
           {GEO_MESSAGE[geo.status] && (
             <span className={s.geoNote}>{GEO_MESSAGE[geo.status]}</span>
           )}
+          {/*
+            GPS 는 '여기' 가 아니라 '이 안쪽' 을 알려 준다. 얼마나 어림한
+            자리인지 적어 두지 않으면, 건물 안에서 점이 튀는 걸 앱이 고장 난
+            것으로 읽는다. 지도에도 같은 반경을 원으로 그려 둔다.
+          */}
+          {geo.active && accuracy !== null && (
+            <span className={s.geoNote} title="GPS 가 알려 준 오차 반경입니다">
+              ±{Math.round(accuracy)}m
+            </span>
+          )}
         </div>
 
         {/* 넓은 화면에는 접히는 시트가 없다. 그래서 같은 단추를 여기에 둔다. */}
@@ -442,7 +453,7 @@ const RoutePanel = ({
                       : null
                   }
                   simulator={simulator}
-                  accuracy={simulator ? SIMULATED_ACCURACY : geo.accuracy}
+                  accuracy={accuracy}
                 />
               )}
               <Summary route={route} compare={compare} roadsOnly={roadsOnly} />

@@ -115,3 +115,19 @@ export const shortcutOverlayStyle: PathOptions = {
   lineCap: 'round',
   interactive: false,
 };
+
+/**
+ * 현위치의 오차 반경.
+ *
+ * GPS 는 '여기' 가 아니라 '이 안쪽' 을 알려 준다. 점 하나만 찍어 두면 그 점이
+ * 곧 내 자리인 줄 알게 되고, 건물 안에서 30m 씩 튀는 걸 앱이 고장 난 것으로
+ * 읽는다. 브라우저가 말해 준 반경을 그대로 그려 둔다.
+ */
+export const accuracyStyle: PathOptions = {
+  color: '#2563EB',
+  weight: 1,
+  opacity: 0.3,
+  fillColor: '#2563EB',
+  fillOpacity: 0.07,
+  interactive: false,
+};

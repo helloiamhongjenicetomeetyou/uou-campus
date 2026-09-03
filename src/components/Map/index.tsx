@@ -11,6 +11,7 @@ import {
   TILE_ATTRIBUTION,
   TILE_URL,
   baseEdgeStyle,
+  accuracyStyle,
   compareStyle,
   passedStyle,
   routeCasingStyle,
@@ -29,6 +30,8 @@ interface Props {
   fromId: string | null;
   toId: string | null;
   here: LatLng | null;
+  /** 현위치의 오차 반경(m). 점 대신 '이 안쪽' 을 그려 준다. */
+  accuracy: number | null;
   /** 걷는 중이면 어디까지 왔는지. 지나온 구간을 눌러 그린다. */
   progress: RouteProgress | null;
   /**
@@ -69,6 +72,9 @@ const PANEL_BREAKPOINT = 768;
  */
 const GUIDE_ZOOM = 18;
 
+/** 이보다 작은 오차 반경은 그리지 않는다. 현위치 점이 이미 그만큼을 덮는다. */
+const HALO_MIN_METERS = 10;
+
 const toLeaflet = (p: LatLng): L.LatLngTuple => [p.lat, p.lng];
 
 const CampusMap = ({
@@ -78,6 +84,7 @@ const CampusMap = ({
   fromId,
   toId,
   here,
+  accuracy,
   progress,
   panelRef,
   sheet,
@@ -103,6 +110,7 @@ const CampusMap = ({
   const routeLayer = useRef<L.LayerGroup | null>(null);
   const markerLayer = useRef<L.LayerGroup | null>(null);
   const hereMarker = useRef<L.Marker | null>(null);
+  const hereHalo = useRef<L.Circle | null>(null);
 
   /* 콜백은 매 렌더 새로 오지만 지도는 한 번만 만든다. 최신 것만 참조로 들고 간다. */
   const handlers = useRef({ onPickNode, onPickEdge, onMoveNode, onMapClick });
@@ -414,7 +422,28 @@ const CampusMap = ({
     if (!here) {
       hereMarker.current?.remove();
       hereMarker.current = null;
+      hereHalo.current?.remove();
+      hereHalo.current = null;
       return;
+    }
+
+    /*
+     * 오차 반경을 먼저 깐다. 점보다 아래에 있어야 점이 안 묻힌다.
+     * 반경이 점만큼 작으면 그리지 않는다 — 테두리만 겹쳐 지저분해진다.
+     */
+    if (accuracy !== null && accuracy > HALO_MIN_METERS) {
+      if (!hereHalo.current) {
+        hereHalo.current = L.circle(toLeaflet(here), {
+          ...accuracyStyle,
+          radius: accuracy,
+        }).addTo(instance);
+      } else {
+        hereHalo.current.setLatLng(toLeaflet(here));
+        hereHalo.current.setRadius(accuracy);
+      }
+    } else {
+      hereHalo.current?.remove();
+      hereHalo.current = null;
     }
 
     if (!hereMarker.current) {
@@ -444,7 +473,7 @@ const CampusMap = ({
     } else if (!instance.getBounds().pad(-0.15).contains(toLeaflet(here))) {
       instance.panTo(toLeaflet(here), { animate: false });
     }
-  }, [here, follow]);
+  }, [here, accuracy, follow]);
 
   return <div ref={holder} className={s.container} />;
 };

@@ -47,6 +47,7 @@ const GROUP_ORDER: NodeKind[] = ['building', 'place', 'gate', 'junction'];
 const GEO_NOTE: Record<string, string> = {
   idle: '위치 권한 필요',
   locating: '찾는 중',
+  coarse: '자리를 다듬는 중',
   ready: '켜져 있음',
   denied: '권한이 막혀 있습니다',
   unsupported: '이 브라우저는 못 씁니다',

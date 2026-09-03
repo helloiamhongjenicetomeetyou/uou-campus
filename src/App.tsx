@@ -12,7 +12,7 @@ import { useGeolocation } from '@/hooks/useGeolocation';
 import { useWalkSimulator } from '@/hooks/useWalkSimulator';
 import { usePhone } from '@/hooks/useMediaQuery';
 import { ARRIVED_METERS, trackProgress } from '@/routing/progress';
-import { toDirections } from '@/routing/directions';
+import { landmarkNear, toDirections } from '@/routing/directions';
 import { useInstall } from '@/hooks/useInstall';
 import { track } from '@/analytics/gtag';
 import CampusMap from '@/components/Map';
@@ -42,6 +42,9 @@ const readSimFlag = () =>
  * 건물이 들어오면 더 나쁘니, 너무 멀면 아무 일도 안 한다.
  */
 const PICK_LIMIT_METERS = 120;
+
+/** 시뮬레이터가 흔드는 폭에 맞춘 가짜 오차 반경(m). RoutePanel 과 같은 값이다. */
+const SIMULATED_ACCURACY = 6;
 
 const App = () => {
   const campus = useCampusDoc();
@@ -310,6 +313,8 @@ const App = () => {
     simulating ? (route?.points ?? null) : null,
   );
   const livePosition = simulating ? simulator.at : geo.here;
+  /* 시뮬레이터가 옆으로 흔드는 폭에 맞춘 가짜 오차 반경(m). */
+  const liveAccuracy = simulating ? SIMULATED_ACCURACY : geo.accuracy;
 
   const progress = useMemo(
     () => (route && livePosition ? trackProgress(route, livePosition) : null),
@@ -406,10 +411,18 @@ const App = () => {
     install.install();
   }, [install]);
 
-  /* 길목에는 이름이 없다. 현위치로 잡힌 자리는 그렇게 보여 준다. */
+  /*
+   * 길목에는 이름이 없다. 현위치로 잡힌 자리는 가까운 건물 이름을 빌려 부른다.
+   *
+   * 기숙사 앞에 서서 현위치를 켰는데 화면에 '현위치 근처' 라고만 떠 있으면, 앱이
+   * 나를 제대로 찾은 것인지 알 방법이 없다. 45m 안에 아무것도 없을 때만 그렇게 쓴다.
+   */
   const from =
     fromNode && !fromNode.name
-      ? { ...fromNode, name: '현위치 근처' }
+      ? {
+          ...fromNode,
+          name: `${landmarkNear(graph, fromNode) || '현위치'} 근처`,
+        }
       : fromNode;
 
   return (
@@ -421,6 +434,7 @@ const App = () => {
         fromId={fromId}
         toId={toId}
         here={livePosition}
+        accuracy={liveAccuracy}
         progress={progress}
         panelRef={panelRef}
         sheet={sheet}
@@ -440,7 +454,7 @@ const App = () => {
         route={route}
         steps={steps}
         progress={progress}
-        accuracy={geo.accuracy}
+        accuracy={liveAccuracy}
         geoStatus={simulating ? 'ready' : geo.status}
         onCancelPick={cancelMapPick}
         onStopGuide={stopGuide}
@@ -461,6 +475,7 @@ const App = () => {
         editing={editing}
         install={{ ...install, install: onInstall }}
         progress={progress}
+        accuracy={liveAccuracy}
         simulator={simulating ? simulator : null}
         panelRef={panelRef}
         phone={phone}
