@@ -1,0 +1,7975 @@
+{
+  "$note": "자동 생성 파일. scripts/fetch-osm.mjs 가 받아 둔 OpenStreetMap 원본에서 scripts/seed-campus.mjs 가 뽑았다. 길 형상과 건물 좌표는 OSM 실측이고, 건물 번호·별칭·출입구 이름표는 사람이 얹은 값이다. 지도 데이터 © OpenStreetMap 기여자, ODbL.",
+  "generatedBy": "scripts/seed-campus.mjs",
+  "osmFetchedAt": "2026-09-03",
+  "osmSource": "https://www.openstreetmap.org/relation/9762419",
+  "nodes": [
+    {
+      "id": "n1",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5438437,
+      "lng": 129.2578569,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n2",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5438169,
+      "lng": 129.2579591,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n3",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5437401,
+      "lng": 129.2575782,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n4",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440374,
+      "lng": 129.2577734,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n5",
+      "kind": "gate",
+      "name": "정문",
+      "lat": 35.5433573,
+      "lng": 129.2598173,
+      "precision": "surveyed",
+      "note": "이 자리는 OSM 의 실제 길 노드다. 정문 이라는 이름표만 추정해 붙였다."
+    },
+    {
+      "id": "n6",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439067,
+      "lng": 129.2579937,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n7",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5436466,
+      "lng": 129.2578937,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n8",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5428794,
+      "lng": 129.2577167,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n9",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5433142,
+      "lng": 129.2575163,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n10",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5426368,
+      "lng": 129.2567376,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n11",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5425019,
+      "lng": 129.2578944,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n12",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5434654,
+      "lng": 129.257447,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n13",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5430734,
+      "lng": 129.2566003,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n14",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5435948,
+      "lng": 129.2574988,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n15",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54333,
+      "lng": 129.2569393,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n16",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5435586,
+      "lng": 129.2576125,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n17",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5438241,
+      "lng": 129.2573655,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n18",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440046,
+      "lng": 129.2574977,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n19",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5425043,
+      "lng": 129.2561599,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n20",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5427528,
+      "lng": 129.2566939,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n21",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.542271,
+      "lng": 129.2559009,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n22",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5428814,
+      "lng": 129.255883,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n23",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421586,
+      "lng": 129.2554087,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n24",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.542102,
+      "lng": 129.2559668,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n25",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5420886,
+      "lng": 129.2551396,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n26",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5422753,
+      "lng": 129.2553616,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n27",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5429113,
+      "lng": 129.2548129,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n28",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5417811,
+      "lng": 129.2552464,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n29",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5431007,
+      "lng": 129.2555103,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n30",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5430079,
+      "lng": 129.2546309,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n31",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5434815,
+      "lng": 129.2553453,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n32",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442827,
+      "lng": 129.2565927,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n33",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440962,
+      "lng": 129.2558815,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n34",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444579,
+      "lng": 129.2562842,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n35",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442706,
+      "lng": 129.2566327,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n36",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440775,
+      "lng": 129.2558103,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n37",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439004,
+      "lng": 129.2559491,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n38",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439073,
+      "lng": 129.2551609,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n39",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5438836,
+      "lng": 129.2558781,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n40",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440034,
+      "lng": 129.2551192,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n41",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5438601,
+      "lng": 129.2551813,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n42",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452835,
+      "lng": 129.2510874,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n43",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453604,
+      "lng": 129.2514282,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n44",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5463959,
+      "lng": 129.2510197,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n45",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545006,
+      "lng": 129.2506735,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n46",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5454565,
+      "lng": 129.2518541,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n47",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544033,
+      "lng": 129.2517435,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n48",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5456359,
+      "lng": 129.2526487,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n49",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453635,
+      "lng": 129.2518926,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n50",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5459673,
+      "lng": 129.2541171,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n51",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5454624,
+      "lng": 129.2527275,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n52",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5460847,
+      "lng": 129.2548817,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n53",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452565,
+      "lng": 129.2543714,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n54",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5460964,
+      "lng": 129.2552009,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n55",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5459222,
+      "lng": 129.2548665,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n56",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5461013,
+      "lng": 129.2552207,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n57",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5462306,
+      "lng": 129.2557468,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n58",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5461894,
+      "lng": 129.2551813,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n59",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5463041,
+      "lng": 129.2560461,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n60",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5463361,
+      "lng": 129.2561764,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n61",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5464063,
+      "lng": 129.2564618,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n62",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5464202,
+      "lng": 129.2561479,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n63",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5466608,
+      "lng": 129.2574974,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n64",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545621,
+      "lng": 129.2573161,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n65",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5464855,
+      "lng": 129.2564334,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n66",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5466926,
+      "lng": 129.2576267,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n67",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5467369,
+      "lng": 129.2575436,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n68",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5467679,
+      "lng": 129.2579329,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n69",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5465774,
+      "lng": 129.2578825,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n70",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5469147,
+      "lng": 129.2576556,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n71",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5468152,
+      "lng": 129.2582282,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n72",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5451622,
+      "lng": 129.2544051,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n73",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545185,
+      "lng": 129.2540651,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n74",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5456542,
+      "lng": 129.2543827,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n75",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545123,
+      "lng": 129.2544191,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n76",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444121,
+      "lng": 129.2543417,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n77",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443945,
+      "lng": 129.2541027,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n78",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452482,
+      "lng": 129.2547947,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n79",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5450962,
+      "lng": 129.2545739,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n80",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5436602,
+      "lng": 129.2544404,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n81",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444354,
+      "lng": 129.2546401,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n82",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5436231,
+      "lng": 129.2544452,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n83",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5437155,
+      "lng": 129.2547536,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n84",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5432534,
+      "lng": 129.2545349,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n85",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5437999,
+      "lng": 129.2541656,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n86",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5432434,
+      "lng": 129.25449,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n87",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5455419,
+      "lng": 129.2574041,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n88",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5455596,
+      "lng": 129.2570614,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n89",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452788,
+      "lng": 129.2576997,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n90",
+      "kind": "gate",
+      "name": "후문",
+      "lat": 35.5459364,
+      "lng": 129.2583845,
+      "precision": "surveyed",
+      "note": "이 자리는 OSM 의 실제 길 노드다. 후문 이라는 이름표만 추정해 붙였다."
+    },
+    {
+      "id": "n91",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5449911,
+      "lng": 129.2578072,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n92",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545581,
+      "lng": 129.2575885,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n93",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448615,
+      "lng": 129.2578533,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n94",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5451485,
+      "lng": 129.2585255,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n95",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448387,
+      "lng": 129.2578583,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n96",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447984,
+      "lng": 129.2576069,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n97",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447236,
+      "lng": 129.2578838,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n98",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5450049,
+      "lng": 129.2585843,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n99",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445767,
+      "lng": 129.2579162,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n100",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446587,
+      "lng": 129.2576286,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n101",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443021,
+      "lng": 129.2579769,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n102",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445197,
+      "lng": 129.2576782,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n103",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441971,
+      "lng": 129.2579641,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n104",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443186,
+      "lng": 129.2580494,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n105",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442496,
+      "lng": 129.2577448,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n106",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441759,
+      "lng": 129.2580739,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n107",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5454708,
+      "lng": 129.2586956,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n108",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5457,
+      "lng": 129.2582975,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n109",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5458648,
+      "lng": 129.26018,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n110",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5449615,
+      "lng": 129.2586029,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n111",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447327,
+      "lng": 129.25735,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n112",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448354,
+      "lng": 129.2567187,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n113",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441273,
+      "lng": 129.2583295,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n114",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439829,
+      "lng": 129.2590889,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n115",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439792,
+      "lng": 129.2582858,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n116",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444165,
+      "lng": 129.2589897,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n117",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439738,
+      "lng": 129.2592144,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n118",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.543596,
+      "lng": 129.259397,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n119",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445115,
+      "lng": 129.2589551,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n120",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445038,
+      "lng": 129.259329,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n121",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443918,
+      "lng": 129.2588948,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n122",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446619,
+      "lng": 129.2600566,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n123",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544113,
+      "lng": 129.2593383,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n124",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447562,
+      "lng": 129.2600642,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n125",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446717,
+      "lng": 129.2604566,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n126",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453283,
+      "lng": 129.2550504,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n127",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453425,
+      "lng": 129.2550956,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n128",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5454218,
+      "lng": 129.2553486,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n129",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452661,
+      "lng": 129.2551311,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n130",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5457996,
+      "lng": 129.2551901,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n131",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453439,
+      "lng": 129.2553863,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n132",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5458263,
+      "lng": 129.2549071,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n133",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5458127,
+      "lng": 129.25661,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n134",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544862,
+      "lng": 129.255646,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n135",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446817,
+      "lng": 129.2561593,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n136",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448217,
+      "lng": 129.2555025,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n137",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5450034,
+      "lng": 129.2555824,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n138",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445569,
+      "lng": 129.255711,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n139",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446814,
+      "lng": 129.2562072,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n140",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54447,
+      "lng": 129.2553991,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n141",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443328,
+      "lng": 129.2557987,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n142",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54476,
+      "lng": 129.2552823,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n143",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441896,
+      "lng": 129.2552431,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n144",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5445837,
+      "lng": 129.2547889,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n145",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5449012,
+      "lng": 129.2552244,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n146",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5456007,
+      "lng": 129.2534809,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n147",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5450928,
+      "lng": 129.253642,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n148",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444029,
+      "lng": 129.2538078,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n149",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453435,
+      "lng": 129.2527799,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n150",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453689,
+      "lng": 129.2524188,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n151",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5451716,
+      "lng": 129.2530346,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n152",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545386,
+      "lng": 129.2529432,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n153",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5454868,
+      "lng": 129.2530723,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n154",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5455243,
+      "lng": 129.252885,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n155",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453377,
+      "lng": 129.2519035,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n156",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452735,
+      "lng": 129.2515614,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n157",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5452159,
+      "lng": 129.2521534,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n158",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447837,
+      "lng": 129.2518292,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n159",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.546825,
+      "lng": 129.2522645,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n160",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5456752,
+      "lng": 129.249554,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n161",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5464782,
+      "lng": 129.2550515,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n162",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5465899,
+      "lng": 129.2547181,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n163",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5465986,
+      "lng": 129.2550023,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n164",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54675,
+      "lng": 129.2563386,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n165",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5465326,
+      "lng": 129.256641,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n166",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5470627,
+      "lng": 129.2565463,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n167",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5468984,
+      "lng": 129.2560955,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n168",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5473311,
+      "lng": 129.2560697,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n169",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5471222,
+      "lng": 129.2565875,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n170",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5474985,
+      "lng": 129.2561736,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n171",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5476176,
+      "lng": 129.2562475,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n172",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5476694,
+      "lng": 129.2557443,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n173",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447414,
+      "lng": 129.2562352,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n174",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441631,
+      "lng": 129.25514,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n175",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440737,
+      "lng": 129.256653,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n176",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441631,
+      "lng": 129.2569874,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n177",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440024,
+      "lng": 129.2566808,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n178",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440717,
+      "lng": 129.2572781,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n179",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5432752,
+      "lng": 129.255774,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n180",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.543225,
+      "lng": 129.2565358,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n181",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5430745,
+      "lng": 129.2559573,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n182",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5429188,
+      "lng": 129.2560116,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n183",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5417772,
+      "lng": 129.2569776,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n184",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5414633,
+      "lng": 129.2574168,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n185",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5418827,
+      "lng": 129.256942,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n186",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5420428,
+      "lng": 129.256888,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n187",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5423097,
+      "lng": 129.2579102,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n188",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421757,
+      "lng": 129.257397,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n189",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5423267,
+      "lng": 129.2573349,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n190",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.542117,
+      "lng": 129.2571722,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n191",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421359,
+      "lng": 129.2574141,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n192",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421078,
+      "lng": 129.2568058,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n193",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5422794,
+      "lng": 129.2571473,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n194",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5422276,
+      "lng": 129.2569459,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n195",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5423834,
+      "lng": 129.2571044,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n196",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421845,
+      "lng": 129.2567769,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n197",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5426447,
+      "lng": 129.2567947,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n198",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5423046,
+      "lng": 129.2567346,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n199",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.542057,
+      "lng": 129.2565984,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n200",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5420468,
+      "lng": 129.2565566,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n201",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5419026,
+      "lng": 129.2566539,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n202",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5419203,
+      "lng": 129.2560406,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n203",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421743,
+      "lng": 129.2565103,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n204",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5437964,
+      "lng": 129.2552089,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n205",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5440518,
+      "lng": 129.2547012,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n206",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441426,
+      "lng": 129.2550604,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n207",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442417,
+      "lng": 129.254671,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n208",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5428102,
+      "lng": 129.2582596,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n209",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5436635,
+      "lng": 129.2579558,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n210",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5427456,
+      "lng": 129.2579984,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n211",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5429712,
+      "lng": 129.2581969,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n212",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5427394,
+      "lng": 129.2582868,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n213",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5427069,
+      "lng": 129.2578536,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n214",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447237,
+      "lng": 129.2587058,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n215",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.545048,
+      "lng": 129.2588137,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n216",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444704,
+      "lng": 129.2587186,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n217",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447136,
+      "lng": 129.2587464,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n218",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443571,
+      "lng": 129.2587626,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n219",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544755,
+      "lng": 129.2579496,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n220",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441386,
+      "lng": 129.2572553,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n221",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443534,
+      "lng": 129.2577074,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n222",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5441902,
+      "lng": 129.257085,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n223",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442382,
+      "lng": 129.2572208,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n224",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446768,
+      "lng": 129.2588949,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n225",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448971,
+      "lng": 129.2589514,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n226",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5431899,
+      "lng": 129.2554805,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n227",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5466978,
+      "lng": 129.254986,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n228",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5468825,
+      "lng": 129.2550656,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n229",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5468639,
+      "lng": 129.2554196,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n230",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5469562,
+      "lng": 129.2548482,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n231",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5469954,
+      "lng": 129.2552606,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n232",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5472959,
+      "lng": 129.2555817,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n233",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5470905,
+      "lng": 129.2550049,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n234",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5470345,
+      "lng": 129.2573553,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n235",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5465989,
+      "lng": 129.2587618,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n236",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5418789,
+      "lng": 129.2560538,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n237",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5420602,
+      "lng": 129.2558196,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n238",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5414407,
+      "lng": 129.2562245,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n239",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5418455,
+      "lng": 129.2559013,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n240",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5411713,
+      "lng": 129.2563355,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n241",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5414704,
+      "lng": 129.256335,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n242",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5415096,
+      "lng": 129.2577531,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n243",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5410831,
+      "lng": 129.2563706,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n244",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5418906,
+      "lng": 129.2581234,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n245",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5414134,
+      "lng": 129.257799,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n246",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.541923,
+      "lng": 129.2582443,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n247",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5424375,
+      "lng": 129.257582,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n248",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5439392,
+      "lng": 129.2548247,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n249",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54379,
+      "lng": 129.2548693,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n250",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5434179,
+      "lng": 129.2550583,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n251",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5412838,
+      "lng": 129.2580118,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n252",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5413695,
+      "lng": 129.2578735,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n253",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5417975,
+      "lng": 129.258288,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n254",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5421475,
+      "lng": 129.2585238,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n255",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5420102,
+      "lng": 129.2585823,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n256",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.54353,
+      "lng": 129.2594087,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n257",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5434656,
+      "lng": 129.2580251,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n258",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.542559,
+      "lng": 129.2579886,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n259",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544963,
+      "lng": 129.2554408,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n260",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447496,
+      "lng": 129.2599748,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n261",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5448663,
+      "lng": 129.2603984,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n262",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5460018,
+      "lng": 129.2602561,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n263",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5456389,
+      "lng": 129.2569772,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n264",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5453708,
+      "lng": 129.2564157,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n265",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5437894,
+      "lng": 129.2572079,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n266",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5442665,
+      "lng": 129.2568331,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n267",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443488,
+      "lng": 129.2570268,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n268",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446943,
+      "lng": 129.2567054,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n269",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443124,
+      "lng": 129.2568191,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n270",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5444045,
+      "lng": 129.2570063,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n271",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544329,
+      "lng": 129.256936,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n272",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5451877,
+      "lng": 129.2591546,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n273",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5450234,
+      "lng": 129.2595282,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n274",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5468664,
+      "lng": 129.2556775,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n275",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5466551,
+      "lng": 129.2560651,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n276",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.546458,
+      "lng": 129.2561351,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n277",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5463403,
+      "lng": 129.2555527,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n278",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5472812,
+      "lng": 129.2566976,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n279",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.547401,
+      "lng": 129.2567806,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n280",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544923,
+      "lng": 129.2564188,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n281",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5449627,
+      "lng": 129.2564613,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n282",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.544815,
+      "lng": 129.2566335,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n283",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5443268,
+      "lng": 129.2575946,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n284",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446142,
+      "lng": 129.2574871,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n285",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5446642,
+      "lng": 129.2575952,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n286",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.546639,
+      "lng": 129.255136,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n287",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.546563,
+      "lng": 129.2579144,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n288",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5466346,
+      "lng": 129.2580734,
+      "precision": "surveyed"
+    },
+    {
+      "id": "n289",
+      "kind": "junction",
+      "name": "",
+      "lat": 35.5447859,
+      "lng": 129.2566544,
+      "precision": "surveyed"
+    },
+    {
+      "id": "b1",
+      "kind": "building",
+      "name": "아산스포츠센터",
+      "no": 39,
+      "lat": 35.5444153,
+      "lng": 129.259505,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b2",
+      "kind": "building",
+      "name": "전기/컴퓨터공학관",
+      "no": 17,
+      "aliases": ["전컴관", "ICT융합학부"],
+      "lat": 35.5441998,
+      "lng": 129.2557169,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b3",
+      "kind": "building",
+      "name": "행정본관",
+      "no": 26,
+      "lat": 35.5437719,
+      "lng": 129.2570363,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b4",
+      "kind": "building",
+      "name": "조선해양공학관",
+      "no": 41,
+      "aliases": ["해양공학관"],
+      "lat": 35.5450584,
+      "lng": 129.2518869,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b5",
+      "kind": "building",
+      "name": "해양공학수조",
+      "no": 27,
+      "aliases": ["해양공학수조"],
+      "lat": 35.5446873,
+      "lng": 129.2521653,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b6",
+      "kind": "building",
+      "name": "산학협동관",
+      "lat": 35.5449624,
+      "lng": 129.2529494,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b7",
+      "kind": "building",
+      "name": "조소실습동",
+      "no": 32,
+      "lat": 35.5449345,
+      "lng": 129.2505685,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b8",
+      "kind": "building",
+      "name": "학생회관",
+      "no": 22,
+      "lat": 35.5446485,
+      "lng": 129.2584501,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b9",
+      "kind": "building",
+      "name": "아산도서관",
+      "no": 16,
+      "aliases": ["도서관"],
+      "lat": 35.5431717,
+      "lng": 129.2581479,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b10",
+      "kind": "building",
+      "name": "아산도서관 신관",
+      "no": 40,
+      "aliases": ["도서관신관"],
+      "lat": 35.5425503,
+      "lng": 129.258362,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b11",
+      "kind": "building",
+      "name": "미술대학",
+      "no": 28,
+      "aliases": ["미대", "예술관"],
+      "lat": 35.5431887,
+      "lng": 129.2541987,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b12",
+      "kind": "building",
+      "name": "공장실험동",
+      "no": 30,
+      "lat": 35.5454431,
+      "lng": 129.2538465,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b13",
+      "kind": "building",
+      "name": "건축관",
+      "no": 44,
+      "lat": 35.5459796,
+      "lng": 129.2564976,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b14",
+      "kind": "building",
+      "name": "건설환경공학관",
+      "no": 23,
+      "lat": 35.5455318,
+      "lng": 129.2547965,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b15",
+      "kind": "building",
+      "name": "문수관",
+      "no": 10,
+      "lat": 35.5434918,
+      "lng": 129.2555124,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b16",
+      "kind": "building",
+      "name": "청운학사 무거관",
+      "no": 25,
+      "aliases": ["기숙사"],
+      "lat": 35.5470322,
+      "lng": 129.2557217,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b17",
+      "kind": "building",
+      "name": "청운학사 목련관",
+      "aliases": ["기숙사"],
+      "lat": 35.5475223,
+      "lng": 129.2557609,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b18",
+      "kind": "building",
+      "name": "기계항공관",
+      "no": 2,
+      "aliases": ["기항관"],
+      "lat": 35.5450094,
+      "lng": 129.254998,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b19",
+      "kind": "building",
+      "name": "산학협력리더스홀",
+      "no": 5,
+      "aliases": ["리더스홀"],
+      "lat": 35.5440354,
+      "lng": 129.2545192,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b20",
+      "kind": "building",
+      "name": "기초과학실험동",
+      "no": 19,
+      "lat": 35.5441093,
+      "lng": 129.2539165,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b21",
+      "kind": "building",
+      "name": "재료/산업공학관",
+      "no": 18,
+      "aliases": ["재료산업공학관"],
+      "lat": 35.5447529,
+      "lng": 129.2538548,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b22",
+      "kind": "building",
+      "name": "음악대학",
+      "no": 29,
+      "aliases": ["음대", "예술관"],
+      "lat": 35.5435451,
+      "lng": 129.2541147,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b23",
+      "kind": "building",
+      "name": "인문관",
+      "no": 14,
+      "lat": 35.5425333,
+      "lng": 129.2573509,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b24",
+      "kind": "building",
+      "name": "생활과학관",
+      "no": 37,
+      "aliases": ["생과관"],
+      "lat": 35.5425686,
+      "lng": 129.2554316,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b25",
+      "kind": "building",
+      "name": "식물원",
+      "no": 34,
+      "aliases": ["식물원"],
+      "lat": 35.541761,
+      "lng": 129.2571838,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b26",
+      "kind": "building",
+      "name": "사회과학관",
+      "no": 15,
+      "aliases": ["사과관"],
+      "lat": 35.5419032,
+      "lng": 129.2576067,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b27",
+      "kind": "building",
+      "name": "학생회관별관",
+      "no": 4,
+      "lat": 35.5445104,
+      "lng": 129.2544554,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b28",
+      "kind": "building",
+      "name": "조형관",
+      "no": 6,
+      "lat": 35.5433067,
+      "lng": 129.2547827,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b29",
+      "kind": "building",
+      "name": "박물관",
+      "aliases": ["박물관"],
+      "lat": 35.542994,
+      "lng": 129.2557759,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b30",
+      "kind": "building",
+      "name": "해송홀",
+      "no": 9,
+      "lat": 35.544678,
+      "lng": 129.2566273,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b31",
+      "kind": "building",
+      "name": "경영관",
+      "no": 24,
+      "lat": 35.542308,
+      "lng": 129.2564024,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b32",
+      "kind": "building",
+      "name": "시청각교육관",
+      "no": 20,
+      "lat": 35.5415697,
+      "lng": 129.2566478,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b33",
+      "kind": "building",
+      "name": "자연과학관",
+      "no": 8,
+      "aliases": ["자과관"],
+      "lat": 35.5428907,
+      "lng": 129.2566837,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b34",
+      "kind": "building",
+      "name": "청운학사 기린관",
+      "no": 45,
+      "aliases": ["기숙사"],
+      "lat": 35.5467459,
+      "lng": 129.2568557,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b35",
+      "kind": "building",
+      "name": "화학공학관",
+      "no": 1,
+      "lat": 35.5446906,
+      "lng": 129.2557142,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b36",
+      "kind": "building",
+      "name": "공학행정관",
+      "no": 3,
+      "aliases": ["공행관"],
+      "lat": 35.545113,
+      "lng": 129.2557466,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b37",
+      "kind": "building",
+      "name": "국제관",
+      "no": 43,
+      "lat": 35.5465294,
+      "lng": 129.2555508,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b38",
+      "kind": "building",
+      "name": "서점 및 북카페",
+      "no": 36,
+      "aliases": ["서점", "북카페"],
+      "lat": 35.5447341,
+      "lng": 129.2582468,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b39",
+      "kind": "building",
+      "name": "KVN 울산 전파천문대",
+      "aliases": ["전파천문대"],
+      "lat": 35.5457751,
+      "lng": 129.2500275,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b40",
+      "kind": "building",
+      "name": "조선해양공학 시험동",
+      "no": 42,
+      "lat": 35.5451664,
+      "lng": 129.2511855,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b41",
+      "kind": "building",
+      "name": "체육관",
+      "no": 12,
+      "lat": 35.545408,
+      "lng": 129.258056,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "b42",
+      "kind": "building",
+      "name": "KCC관",
+      "no": 46,
+      "aliases": ["KCC관"],
+      "lat": 35.5463517,
+      "lng": 129.2580921,
+      "precision": "surveyed",
+      "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e2",
+      "from": "n1",
+      "to": "n3",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5438225,
+          "lng": 129.2578492
+        },
+        {
+          "lat": 35.5437781,
+          "lng": 129.257812
+        },
+        {
+          "lat": 35.5437426,
+          "lng": 129.2577533
+        },
+        {
+          "lat": 35.5437255,
+          "lng": 129.2576832
+        },
+        {
+          "lat": 35.5437289,
+          "lng": 129.2576102
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "from": "n1",
+      "to": "n4",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5438741,
+          "lng": 129.2578678
+        },
+        {
+          "lat": 35.5439278,
+          "lng": 129.2578658
+        },
+        {
+          "lat": 35.5439785,
+          "lng": 129.2578435
+        },
+        {
+          "lat": 35.544021,
+          "lng": 129.2578031
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "from": "n2",
+      "to": "n5",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5438151,
+          "lng": 129.2581731
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e5",
+      "from": "n2",
+      "to": "n6",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e6",
+      "from": "n2",
+      "to": "n7",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e7",
+      "from": "n8",
+      "to": "n9",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e8",
+      "from": "n8",
+      "to": "n10",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e9",
+      "from": "n8",
+      "to": "n11",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e10",
+      "from": "n9",
+      "to": "n12",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e11",
+      "from": "n9",
+      "to": "n13",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e12",
+      "from": "n12",
+      "to": "n14",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5434842,
+          "lng": 129.2574383
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "from": "n12",
+      "to": "n15",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e14",
+      "from": "n14",
+      "to": "n3",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e15",
+      "from": "n14",
+      "to": "n16",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e16",
+      "from": "n14",
+      "to": "n17",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5436135,
+          "lng": 129.2574406
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e17",
+      "from": "n3",
+      "to": "n18",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5437524,
+          "lng": 129.257543
+        },
+        {
+          "lat": 35.5437931,
+          "lng": 129.2574897
+        },
+        {
+          "lat": 35.5438463,
+          "lng": 129.2574567
+        },
+        {
+          "lat": 35.5439054,
+          "lng": 129.257448
+        },
+        {
+          "lat": 35.5439633,
+          "lng": 129.2574646
+        }
+      ]
+    },
+    {
+      "id": "e18",
+      "from": "n10",
+      "to": "n19",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e19",
+      "from": "n10",
+      "to": "n20",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e20",
+      "from": "n19",
+      "to": "n21",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e21",
+      "from": "n19",
+      "to": "n22",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5426497,
+          "lng": 129.2559779
+        }
+      ]
+    },
+    {
+      "id": "e22",
+      "from": "n21",
+      "to": "n23",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e23",
+      "from": "n21",
+      "to": "n24",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e24",
+      "from": "n23",
+      "to": "n25",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e25",
+      "from": "n23",
+      "to": "n26",
+      "surface": "path",
+      "shortcut": false,
+      "covered": true,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e26",
+      "from": "n25",
+      "to": "n27",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e27",
+      "from": "n25",
+      "to": "n28",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5419692,
+          "lng": 129.2551811
+        }
+      ]
+    },
+    {
+      "id": "e28",
+      "from": "n27",
+      "to": "n29",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e29",
+      "from": "n27",
+      "to": "n30",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e30",
+      "from": "n29",
+      "to": "n31",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e31",
+      "from": "n29",
+      "to": "n22",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5428259,
+          "lng": 129.2556294
+        }
+      ]
+    },
+    {
+      "id": "e32",
+      "from": "n32",
+      "to": "n33",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e33",
+      "from": "n32",
+      "to": "n34",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e34",
+      "from": "n32",
+      "to": "n35",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e35",
+      "from": "n33",
+      "to": "n36",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e36",
+      "from": "n33",
+      "to": "n37",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e37",
+      "from": "n36",
+      "to": "n38",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e38",
+      "from": "n36",
+      "to": "n39",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e39",
+      "from": "n38",
+      "to": "n40",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e40",
+      "from": "n38",
+      "to": "n41",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e41",
+      "from": "n42",
+      "to": "n43",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e42",
+      "from": "n42",
+      "to": "n44",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5454073,
+          "lng": 129.2510385
+        }
+      ]
+    },
+    {
+      "id": "e43",
+      "from": "n42",
+      "to": "n45",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5451752,
+          "lng": 129.2509254
+        }
+      ]
+    },
+    {
+      "id": "e44",
+      "from": "n43",
+      "to": "n46",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e45",
+      "from": "n43",
+      "to": "n47",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5445826,
+          "lng": 129.2517555
+        },
+        {
+          "lat": 35.5445182,
+          "lng": 129.2517826
+        },
+        {
+          "lat": 35.5444692,
+          "lng": 129.2517921
+        },
+        {
+          "lat": 35.544373,
+          "lng": 129.251774
+        },
+        {
+          "lat": 35.5441669,
+          "lng": 129.2517418
+        }
+      ]
+    },
+    {
+      "id": "e46",
+      "from": "n46",
+      "to": "n48",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e47",
+      "from": "n46",
+      "to": "n49",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e48",
+      "from": "n48",
+      "to": "n50",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e49",
+      "from": "n48",
+      "to": "n51",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e50",
+      "from": "n50",
+      "to": "n52",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5460805,
+          "lng": 129.2546188
+        }
+      ]
+    },
+    {
+      "id": "e51",
+      "from": "n50",
+      "to": "n53",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e52",
+      "from": "n52",
+      "to": "n54",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5460894,
+          "lng": 129.2551723
+        }
+      ]
+    },
+    {
+      "id": "e53",
+      "from": "n52",
+      "to": "n55",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e54",
+      "from": "n54",
+      "to": "n56",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e55",
+      "from": "n54",
+      "to": "n57",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5459979,
+          "lng": 129.2552418
+        },
+        {
+          "lat": 35.5460804,
+          "lng": 129.2555706
+        },
+        {
+          "lat": 35.5460663,
+          "lng": 129.2556474
+        },
+        {
+          "lat": 35.5461066,
+          "lng": 129.2557976
+        }
+      ]
+    },
+    {
+      "id": "e56",
+      "from": "n56",
+      "to": "n57",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e57",
+      "from": "n56",
+      "to": "n58",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e58",
+      "from": "n57",
+      "to": "n59",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e59",
+      "from": "n59",
+      "to": "n60",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.546318,
+          "lng": 129.2561025
+        }
+      ]
+    },
+    {
+      "id": "e60",
+      "from": "n59",
+      "to": "n58",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5463493,
+          "lng": 129.2558105
+        }
+      ]
+    },
+    {
+      "id": "e61",
+      "from": "n60",
+      "to": "n61",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5463819,
+          "lng": 129.2563626
+        }
+      ]
+    },
+    {
+      "id": "e62",
+      "from": "n60",
+      "to": "n62",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e63",
+      "from": "n61",
+      "to": "n63",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e64",
+      "from": "n61",
+      "to": "n64",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e65",
+      "from": "n61",
+      "to": "n65",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e66",
+      "from": "n63",
+      "to": "n66",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e67",
+      "from": "n63",
+      "to": "n67",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e68",
+      "from": "n66",
+      "to": "n68",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e69",
+      "from": "n66",
+      "to": "n69",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e70",
+      "from": "n68",
+      "to": "n70",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5468227,
+          "lng": 129.2578861
+        }
+      ]
+    },
+    {
+      "id": "e71",
+      "from": "n68",
+      "to": "n71",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e72",
+      "from": "n53",
+      "to": "n72",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e73",
+      "from": "n53",
+      "to": "n73",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e74",
+      "from": "n53",
+      "to": "n74",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5453294,
+          "lng": 129.2544435
+        },
+        {
+          "lat": 35.5453976,
+          "lng": 129.2544212
+        },
+        {
+          "lat": 35.5454161,
+          "lng": 129.2544357
+        },
+        {
+          "lat": 35.5456002,
+          "lng": 129.2543539
+        }
+      ]
+    },
+    {
+      "id": "e75",
+      "from": "n72",
+      "to": "n75",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e76",
+      "from": "n72",
+      "to": "n73",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5450884,
+          "lng": 129.2540977
+        }
+      ]
+    },
+    {
+      "id": "e77",
+      "from": "n75",
+      "to": "n76",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5445992,
+          "lng": 129.2543189
+        }
+      ]
+    },
+    {
+      "id": "e78",
+      "from": "n75",
+      "to": "n77",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5446885,
+          "lng": 129.2540715
+        }
+      ]
+    },
+    {
+      "id": "e79",
+      "from": "n75",
+      "to": "n78",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e80",
+      "from": "n75",
+      "to": "n79",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e81",
+      "from": "n76",
+      "to": "n80",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e82",
+      "from": "n76",
+      "to": "n77",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e83",
+      "from": "n76",
+      "to": "n81",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e84",
+      "from": "n80",
+      "to": "n82",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e85",
+      "from": "n80",
+      "to": "n83",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e86",
+      "from": "n82",
+      "to": "n84",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5434261,
+          "lng": 129.2544674
+        }
+      ]
+    },
+    {
+      "id": "e87",
+      "from": "n82",
+      "to": "n85",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e88",
+      "from": "n84",
+      "to": "n30",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e89",
+      "from": "n84",
+      "to": "n86",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e90",
+      "from": "n30",
+      "to": "n85",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.542854,
+          "lng": 129.2540347
+        },
+        {
+          "lat": 35.5433865,
+          "lng": 129.2538576
+        },
+        {
+          "lat": 35.5437219,
+          "lng": 129.2538629
+        }
+      ]
+    },
+    {
+      "id": "e91",
+      "from": "n77",
+      "to": "n85",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e92",
+      "from": "n64",
+      "to": "n87",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5455978,
+          "lng": 129.2573413
+        }
+      ]
+    },
+    {
+      "id": "e93",
+      "from": "n64",
+      "to": "n88",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e94",
+      "from": "n87",
+      "to": "n89",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e95",
+      "from": "n87",
+      "to": "n90",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.54565,
+          "lng": 129.2575241
+        },
+        {
+          "lat": 35.5456896,
+          "lng": 129.2576995
+        },
+        {
+          "lat": 35.5457823,
+          "lng": 129.2581107
+        },
+        {
+          "lat": 35.5458092,
+          "lng": 129.2582302
+        },
+        {
+          "lat": 35.5458167,
+          "lng": 129.2582746
+        },
+        {
+          "lat": 35.5458782,
+          "lng": 129.2583311
+        }
+      ]
+    },
+    {
+      "id": "e96",
+      "from": "n89",
+      "to": "n91",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e97",
+      "from": "n89",
+      "to": "n92",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e98",
+      "from": "n91",
+      "to": "n93",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e99",
+      "from": "n91",
+      "to": "n94",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.545016,
+          "lng": 129.257921
+        }
+      ]
+    },
+    {
+      "id": "e100",
+      "from": "n93",
+      "to": "n95",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e101",
+      "from": "n93",
+      "to": "n96",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e102",
+      "from": "n95",
+      "to": "n97",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e103",
+      "from": "n95",
+      "to": "n98",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e104",
+      "from": "n97",
+      "to": "n99",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e105",
+      "from": "n97",
+      "to": "n100",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e106",
+      "from": "n99",
+      "to": "n101",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e107",
+      "from": "n99",
+      "to": "n102",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e108",
+      "from": "n101",
+      "to": "n103",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5442672,
+          "lng": 129.2579846
+        }
+      ]
+    },
+    {
+      "id": "e109",
+      "from": "n101",
+      "to": "n104",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e110",
+      "from": "n101",
+      "to": "n105",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e111",
+      "from": "n103",
+      "to": "n106",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5441907,
+          "lng": 129.2579976
+        }
+      ]
+    },
+    {
+      "id": "e112",
+      "from": "n103",
+      "to": "n4",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e113",
+      "from": "n94",
+      "to": "n107",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5454131,
+          "lng": 129.2586651
+        }
+      ]
+    },
+    {
+      "id": "e114",
+      "from": "n94",
+      "to": "n98",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e115",
+      "from": "n94",
+      "to": "n108",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e116",
+      "from": "n107",
+      "to": "n109",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5462347,
+          "lng": 129.2591369
+        }
+      ]
+    },
+    {
+      "id": "e117",
+      "from": "n98",
+      "to": "n110",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e118",
+      "from": "n96",
+      "to": "n111",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e119",
+      "from": "n96",
+      "to": "n112",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5448483,
+          "lng": 129.2575534
+        }
+      ]
+    },
+    {
+      "id": "e120",
+      "from": "n106",
+      "to": "n113",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e121",
+      "from": "n106",
+      "to": "n6",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5441226,
+          "lng": 129.2580739
+        }
+      ]
+    },
+    {
+      "id": "e122",
+      "from": "n106",
+      "to": "n104",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e123",
+      "from": "n113",
+      "to": "n114",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e124",
+      "from": "n113",
+      "to": "n115",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e125",
+      "from": "n114",
+      "to": "n116",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5441587,
+          "lng": 129.2590837
+        }
+      ]
+    },
+    {
+      "id": "e126",
+      "from": "n114",
+      "to": "n117",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5439612,
+          "lng": 129.2592031
+        }
+      ]
+    },
+    {
+      "id": "e127",
+      "from": "n114",
+      "to": "n118",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5438129,
+          "lng": 129.2590538
+        },
+        {
+          "lat": 35.5437941,
+          "lng": 129.2591314
+        },
+        {
+          "lat": 35.5437699,
+          "lng": 129.2591916
+        },
+        {
+          "lat": 35.5437343,
+          "lng": 129.2592482
+        },
+        {
+          "lat": 35.5436616,
+          "lng": 129.2593363
+        }
+      ]
+    },
+    {
+      "id": "e128",
+      "from": "n116",
+      "to": "n119",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e129",
+      "from": "n116",
+      "to": "n120",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e130",
+      "from": "n116",
+      "to": "n121",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e131",
+      "from": "n122",
+      "to": "n123",
+      "surface": "road",
+      "shortcut": false,
+      "covered": true,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.544756,
+          "lng": 129.2594189
+        }
+      ]
+    },
+    {
+      "id": "e132",
+      "from": "n122",
+      "to": "n117",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5446615,
+          "lng": 129.2600566
+        },
+        {
+          "lat": 35.5444337,
+          "lng": 129.2600378
+        },
+        {
+          "lat": 35.543934,
+          "lng": 129.2598712
+        },
+        {
+          "lat": 35.5438869,
+          "lng": 129.2596593
+        }
+      ]
+    },
+    {
+      "id": "e133",
+      "from": "n122",
+      "to": "n124",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e134",
+      "from": "n122",
+      "to": "n125",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5446878,
+          "lng": 129.2602402
+        }
+      ]
+    },
+    {
+      "id": "e135",
+      "from": "n123",
+      "to": "n117",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e136",
+      "from": "n78",
+      "to": "n126",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e137",
+      "from": "n126",
+      "to": "n127",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e138",
+      "from": "n127",
+      "to": "n128",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e139",
+      "from": "n127",
+      "to": "n129",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e140",
+      "from": "n128",
+      "to": "n130",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e141",
+      "from": "n128",
+      "to": "n131",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e142",
+      "from": "n55",
+      "to": "n74",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5457535,
+          "lng": 129.2543339
+        }
+      ]
+    },
+    {
+      "id": "e143",
+      "from": "n55",
+      "to": "n132",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e144",
+      "from": "n132",
+      "to": "n74",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e145",
+      "from": "n132",
+      "to": "n130",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5459023,
+          "lng": 129.255147
+        }
+      ]
+    },
+    {
+      "id": "e146",
+      "from": "n130",
+      "to": "n133",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5459019,
+          "lng": 129.2556261
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e147",
+      "from": "n134",
+      "to": "n135",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5449584,
+          "lng": 129.2559897
+        },
+        {
+          "lat": 35.5449405,
+          "lng": 129.2560485
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e148",
+      "from": "n134",
+      "to": "n136",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e149",
+      "from": "n134",
+      "to": "n137",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e150",
+      "from": "n135",
+      "to": "n138",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e151",
+      "from": "n135",
+      "to": "n139",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e152",
+      "from": "n138",
+      "to": "n140",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e153",
+      "from": "n138",
+      "to": "n141",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e154",
+      "from": "n140",
+      "to": "n142",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e155",
+      "from": "n140",
+      "to": "n143",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e156",
+      "from": "n142",
+      "to": "n144",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5446957,
+          "lng": 129.2551023
+        }
+      ]
+    },
+    {
+      "id": "e157",
+      "from": "n142",
+      "to": "n136",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e158",
+      "from": "n142",
+      "to": "n145",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e159",
+      "from": "n146",
+      "to": "n147",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5451665,
+          "lng": 129.253626
+        }
+      ]
+    },
+    {
+      "id": "e160",
+      "from": "n147",
+      "to": "n148",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5450264,
+          "lng": 129.2536389
+        }
+      ]
+    },
+    {
+      "id": "e161",
+      "from": "n147",
+      "to": "n73",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e162",
+      "from": "n51",
+      "to": "n149",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e163",
+      "from": "n51",
+      "to": "n150",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e164",
+      "from": "n149",
+      "to": "n151",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5451211,
+          "lng": 129.2528775
+        }
+      ]
+    },
+    {
+      "id": "e165",
+      "from": "n149",
+      "to": "n152",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e166",
+      "from": "n151",
+      "to": "n153",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5452237,
+          "lng": 129.2531967
+        }
+      ]
+    },
+    {
+      "id": "e167",
+      "from": "n151",
+      "to": "n152",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e168",
+      "from": "n154",
+      "to": "n152",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e169",
+      "from": "n49",
+      "to": "n155",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e170",
+      "from": "n49",
+      "to": "n156",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e171",
+      "from": "n155",
+      "to": "n157",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5451684,
+          "lng": 129.2519746
+        }
+      ]
+    },
+    {
+      "id": "e172",
+      "from": "n157",
+      "to": "n158",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5449106,
+          "lng": 129.2522896
+        }
+      ]
+    },
+    {
+      "id": "e173",
+      "from": "n44",
+      "to": "n159",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e174",
+      "from": "n44",
+      "to": "n160",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5466468,
+          "lng": 129.2502446
+        },
+        {
+          "lat": 35.5465617,
+          "lng": 129.2496196
+        },
+        {
+          "lat": 35.5465072,
+          "lng": 129.2493541
+        },
+        {
+          "lat": 35.5463675,
+          "lng": 129.2490564
+        },
+        {
+          "lat": 35.5461209,
+          "lng": 129.2489142
+        },
+        {
+          "lat": 35.5459245,
+          "lng": 129.2489196
+        },
+        {
+          "lat": 35.5457172,
+          "lng": 129.2491261
+        },
+        {
+          "lat": 35.5455688,
+          "lng": 129.2492951
+        },
+        {
+          "lat": 35.5456514,
+          "lng": 129.249496
+        }
+      ]
+    },
+    {
+      "id": "e175",
+      "from": "n58",
+      "to": "n161",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e176",
+      "from": "n161",
+      "to": "n162",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5465522,
+          "lng": 129.2549153
+        },
+        {
+          "lat": 35.5465957,
+          "lng": 129.2548312
+        },
+        {
+          "lat": 35.5466039,
+          "lng": 129.254774
+        }
+      ]
+    },
+    {
+      "id": "e177",
+      "from": "n161",
+      "to": "n163",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e178",
+      "from": "n65",
+      "to": "n164",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e179",
+      "from": "n65",
+      "to": "n62",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e180",
+      "from": "n65",
+      "to": "n165",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e181",
+      "from": "n164",
+      "to": "n166",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e182",
+      "from": "n164",
+      "to": "n167",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e183",
+      "from": "n166",
+      "to": "n168",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5472743,
+          "lng": 129.2560345
+        }
+      ]
+    },
+    {
+      "id": "e184",
+      "from": "n166",
+      "to": "n169",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e185",
+      "from": "n168",
+      "to": "n170",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e186",
+      "from": "n168",
+      "to": "n169",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e187",
+      "from": "n170",
+      "to": "n171",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e188",
+      "from": "n170",
+      "to": "n172",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e189",
+      "from": "n34",
+      "to": "n139",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e190",
+      "from": "n34",
+      "to": "n141",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e191",
+      "from": "n139",
+      "to": "n173",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e192",
+      "from": "n141",
+      "to": "n143",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e193",
+      "from": "n143",
+      "to": "n174",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e194",
+      "from": "n37",
+      "to": "n175",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e195",
+      "from": "n37",
+      "to": "n39",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e196",
+      "from": "n176",
+      "to": "n177",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5440554,
+          "lng": 129.2569023
+        }
+      ]
+    },
+    {
+      "id": "e197",
+      "from": "n176",
+      "to": "n178",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e198",
+      "from": "n176",
+      "to": "n35",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e199",
+      "from": "n177",
+      "to": "n175",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e200",
+      "from": "n177",
+      "to": "n15",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e201",
+      "from": "n175",
+      "to": "n35",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5441527,
+          "lng": 129.2566238
+        }
+      ]
+    },
+    {
+      "id": "e202",
+      "from": "n39",
+      "to": "n179",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5438288,
+          "lng": 129.2556464
+        },
+        {
+          "lat": 35.5437087,
+          "lng": 129.2555924
+        }
+      ]
+    },
+    {
+      "id": "e203",
+      "from": "n15",
+      "to": "n180",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e204",
+      "from": "n180",
+      "to": "n181",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e205",
+      "from": "n180",
+      "to": "n13",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e206",
+      "from": "n181",
+      "to": "n182",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e207",
+      "from": "n181",
+      "to": "n179",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5431447,
+          "lng": 129.2558287
+        }
+      ]
+    },
+    {
+      "id": "e208",
+      "from": "n182",
+      "to": "n22",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e209",
+      "from": "n182",
+      "to": "n13",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e210",
+      "from": "n183",
+      "to": "n184",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5413888,
+          "lng": 129.2571082
+        }
+      ]
+    },
+    {
+      "id": "e211",
+      "from": "n183",
+      "to": "n185",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e212",
+      "from": "n185",
+      "to": "n186",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5420242,
+          "lng": 129.2568946
+        }
+      ]
+    },
+    {
+      "id": "e213",
+      "from": "n187",
+      "to": "n188",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e214",
+      "from": "n187",
+      "to": "n184",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5418516,
+          "lng": 129.2580948
+        },
+        {
+          "lat": 35.541555,
+          "lng": 129.2577869
+        }
+      ]
+    },
+    {
+      "id": "e215",
+      "from": "n187",
+      "to": "n189",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5424584,
+          "lng": 129.257852
+        }
+      ]
+    },
+    {
+      "id": "e216",
+      "from": "n188",
+      "to": "n190",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e217",
+      "from": "n188",
+      "to": "n189",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e218",
+      "from": "n188",
+      "to": "n191",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e219",
+      "from": "n190",
+      "to": "n186",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e220",
+      "from": "n190",
+      "to": "n184",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5420975,
+          "lng": 129.2571793
+        }
+      ]
+    },
+    {
+      "id": "e221",
+      "from": "n186",
+      "to": "n192",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.542029,
+          "lng": 129.2568349
+        }
+      ]
+    },
+    {
+      "id": "e222",
+      "from": "n189",
+      "to": "n193",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e223",
+      "from": "n193",
+      "to": "n194",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e224",
+      "from": "n193",
+      "to": "n195",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e225",
+      "from": "n194",
+      "to": "n196",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e226",
+      "from": "n194",
+      "to": "n197",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5422843,
+          "lng": 129.2569243
+        }
+      ]
+    },
+    {
+      "id": "e227",
+      "from": "n196",
+      "to": "n192",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e228",
+      "from": "n196",
+      "to": "n198",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e229",
+      "from": "n192",
+      "to": "n199",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e230",
+      "from": "n199",
+      "to": "n200",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e231",
+      "from": "n199",
+      "to": "n201",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e232",
+      "from": "n200",
+      "to": "n202",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e233",
+      "from": "n200",
+      "to": "n203",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e234",
+      "from": "n204",
+      "to": "n83",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e235",
+      "from": "n204",
+      "to": "n41",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e236",
+      "from": "n204",
+      "to": "n31",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e237",
+      "from": "n83",
+      "to": "n205",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e238",
+      "from": "n205",
+      "to": "n206",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e239",
+      "from": "n205",
+      "to": "n207",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e240",
+      "from": "n79",
+      "to": "n129",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e241",
+      "from": "n79",
+      "to": "n145",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5450699,
+          "lng": 129.2545167
+        },
+        {
+          "lat": 35.5450153,
+          "lng": 129.2544953
+        },
+        {
+          "lat": 35.5447294,
+          "lng": 129.2546133
+        },
+        {
+          "lat": 35.5447687,
+          "lng": 129.254785
+        }
+      ]
+    },
+    {
+      "id": "e242",
+      "from": "n208",
+      "to": "n209",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.54295,
+          "lng": 129.258809
+        },
+        {
+          "lat": 35.5431028,
+          "lng": 129.2588626
+        },
+        {
+          "lat": 35.5431814,
+          "lng": 129.2592972
+        },
+        {
+          "lat": 35.5433389,
+          "lng": 129.2593615
+        },
+        {
+          "lat": 35.5436861,
+          "lng": 129.25804
+        }
+      ]
+    },
+    {
+      "id": "e243",
+      "from": "n208",
+      "to": "n210",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e244",
+      "from": "n208",
+      "to": "n211",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e245",
+      "from": "n208",
+      "to": "n212",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e246",
+      "from": "n210",
+      "to": "n213",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e247",
+      "from": "n110",
+      "to": "n214",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5449516,
+          "lng": 129.2586072
+        },
+        {
+          "lat": 35.5447921,
+          "lng": 129.2586757
+        }
+      ]
+    },
+    {
+      "id": "e248",
+      "from": "n110",
+      "to": "n215",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e249",
+      "from": "n214",
+      "to": "n216",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5444912,
+          "lng": 129.2588103
+        }
+      ]
+    },
+    {
+      "id": "e250",
+      "from": "n214",
+      "to": "n217",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e251",
+      "from": "n216",
+      "to": "n104",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e252",
+      "from": "n216",
+      "to": "n218",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e253",
+      "from": "n104",
+      "to": "n219",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e254",
+      "from": "n105",
+      "to": "n220",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5442435,
+          "lng": 129.2577181
+        },
+        {
+          "lat": 35.5441632,
+          "lng": 129.2573638
+        }
+      ]
+    },
+    {
+      "id": "e255",
+      "from": "n105",
+      "to": "n221",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e256",
+      "from": "n220",
+      "to": "n178",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e257",
+      "from": "n220",
+      "to": "n222",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e258",
+      "from": "n220",
+      "to": "n223",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e259",
+      "from": "n224",
+      "to": "n119",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e260",
+      "from": "n224",
+      "to": "n217",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e261",
+      "from": "n224",
+      "to": "n225",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e262",
+      "from": "n217",
+      "to": "n215",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e263",
+      "from": "n121",
+      "to": "n218",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e264",
+      "from": "n179",
+      "to": "n226",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e265",
+      "from": "n227",
+      "to": "n228",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5467525,
+          "lng": 129.2549797
+        }
+      ]
+    },
+    {
+      "id": "e266",
+      "from": "n227",
+      "to": "n229",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5467253,
+          "lng": 129.2550902
+        },
+        {
+          "lat": 35.5467751,
+          "lng": 129.255126
+        }
+      ]
+    },
+    {
+      "id": "e267",
+      "from": "n227",
+      "to": "n163",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e268",
+      "from": "n228",
+      "to": "n230",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e269",
+      "from": "n228",
+      "to": "n231",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e270",
+      "from": "n231",
+      "to": "n232",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5472095,
+          "lng": 129.2552529
+        }
+      ]
+    },
+    {
+      "id": "e271",
+      "from": "n231",
+      "to": "n233",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e272",
+      "from": "n70",
+      "to": "n234",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e273",
+      "from": "n70",
+      "to": "n67",
+      "surface": "road",
+      "shortcut": false,
+      "covered": true,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e274",
+      "from": "n67",
+      "to": "n169",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e275",
+      "from": "n108",
+      "to": "n90",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e276",
+      "from": "n90",
+      "to": "n235",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e277",
+      "from": "n174",
+      "to": "n206",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e278",
+      "from": "n174",
+      "to": "n144",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5444334,
+          "lng": 129.2550432
+        },
+        {
+          "lat": 35.5444534,
+          "lng": 129.2550257
+        },
+        {
+          "lat": 35.5444581,
+          "lng": 129.2549906
+        },
+        {
+          "lat": 35.544461,
+          "lng": 129.2549463
+        },
+        {
+          "lat": 35.5444201,
+          "lng": 129.2548108
+        }
+      ]
+    },
+    {
+      "id": "e279",
+      "from": "n206",
+      "to": "n40",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e280",
+      "from": "n206",
+      "to": "n207",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e281",
+      "from": "n24",
+      "to": "n236",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e282",
+      "from": "n24",
+      "to": "n237",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e283",
+      "from": "n236",
+      "to": "n238",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e284",
+      "from": "n236",
+      "to": "n239",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e285",
+      "from": "n238",
+      "to": "n240",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e286",
+      "from": "n238",
+      "to": "n241",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e287",
+      "from": "n240",
+      "to": "n242",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5411671,
+          "lng": 129.2563822
+        },
+        {
+          "lat": 35.5413454,
+          "lng": 129.2571228
+        },
+        {
+          "lat": 35.5414225,
+          "lng": 129.2574321
+        }
+      ]
+    },
+    {
+      "id": "e288",
+      "from": "n240",
+      "to": "n243",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e289",
+      "from": "n242",
+      "to": "n244",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5415277,
+          "lng": 129.2578196
+        },
+        {
+          "lat": 35.5418459,
+          "lng": 129.2581401
+        }
+      ]
+    },
+    {
+      "id": "e290",
+      "from": "n242",
+      "to": "n245",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e291",
+      "from": "n244",
+      "to": "n11",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e292",
+      "from": "n244",
+      "to": "n246",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e293",
+      "from": "n11",
+      "to": "n247",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e294",
+      "from": "n40",
+      "to": "n248",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e295",
+      "from": "n41",
+      "to": "n249",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e296",
+      "from": "n31",
+      "to": "n250",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e297",
+      "from": "n245",
+      "to": "n251",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.541312,
+          "lng": 129.2576914
+        },
+        {
+          "lat": 35.5411699,
+          "lng": 129.2579033
+        }
+      ]
+    },
+    {
+      "id": "e298",
+      "from": "n245",
+      "to": "n252",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e299",
+      "from": "n251",
+      "to": "n253",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5418701,
+          "lng": 129.2585705
+        }
+      ]
+    },
+    {
+      "id": "e300",
+      "from": "n251",
+      "to": "n252",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e301",
+      "from": "n253",
+      "to": "n252",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e302",
+      "from": "n253",
+      "to": "n246",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e303",
+      "from": "n246",
+      "to": "n254",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5420625,
+          "lng": 129.2581957
+        }
+      ]
+    },
+    {
+      "id": "e304",
+      "from": "n246",
+      "to": "n255",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e305",
+      "from": "n18",
+      "to": "n178",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e306",
+      "from": "n18",
+      "to": "n4",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5440132,
+          "lng": 129.2575046
+        },
+        {
+          "lat": 35.5440462,
+          "lng": 129.2575567
+        },
+        {
+          "lat": 35.5440645,
+          "lng": 129.2576189
+        },
+        {
+          "lat": 35.5440662,
+          "lng": 129.2576849
+        },
+        {
+          "lat": 35.5440512,
+          "lng": 129.2577484
+        }
+      ]
+    },
+    {
+      "id": "e307",
+      "from": "n178",
+      "to": "n17",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5440212,
+          "lng": 129.2572953
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e308",
+      "from": "n256",
+      "to": "n6",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e309",
+      "from": "n256",
+      "to": "n118",
+      "surface": "path",
+      "shortcut": false,
+      "covered": true,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e310",
+      "from": "n209",
+      "to": "n7",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e311",
+      "from": "n209",
+      "to": "n257",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e312",
+      "from": "n7",
+      "to": "n16",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5435748,
+          "lng": 129.2576283
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e313",
+      "from": "n16",
+      "to": "n213",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5435146,
+          "lng": 129.2575698
+        },
+        {
+          "lat": 35.5434287,
+          "lng": 129.2575519
+        },
+        {
+          "lat": 35.5433918,
+          "lng": 129.257566
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e314",
+      "from": "n213",
+      "to": "n258",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5425412,
+          "lng": 129.2579224
+        }
+      ]
+    },
+    {
+      "id": "e315",
+      "from": "n81",
+      "to": "n207",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e316",
+      "from": "n81",
+      "to": "n144",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5445259,
+          "lng": 129.2546257
+        }
+      ]
+    },
+    {
+      "id": "e317",
+      "from": "n136",
+      "to": "n259",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e318",
+      "from": "n131",
+      "to": "n137",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5452473,
+          "lng": 129.2554743
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e319",
+      "from": "n131",
+      "to": "n129",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e320",
+      "from": "n137",
+      "to": "n259",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e321",
+      "from": "n124",
+      "to": "n260",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e322",
+      "from": "n124",
+      "to": "n261",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5448264,
+          "lng": 129.2602595
+        }
+      ]
+    },
+    {
+      "id": "e323",
+      "from": "n109",
+      "to": "n262",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e324",
+      "from": "n88",
+      "to": "n263",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e325",
+      "from": "n88",
+      "to": "n133",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5455578,
+          "lng": 129.2568878
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e326",
+      "from": "n88",
+      "to": "n264",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5454712,
+          "lng": 129.2569253
+        },
+        {
+          "lat": 35.5453665,
+          "lng": 129.256641
+        }
+      ]
+    },
+    {
+      "id": "e327",
+      "from": "n145",
+      "to": "n259",
+      "surface": "road",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 공대 세로축"
+    },
+    {
+      "id": "e328",
+      "from": "n17",
+      "to": "n265",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 정문에서 캠퍼스 안쪽으로"
+    },
+    {
+      "id": "e329",
+      "from": "n222",
+      "to": "n266",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e330",
+      "from": "n222",
+      "to": "n267",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e331",
+      "from": "n266",
+      "to": "n268",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5443317,
+          "lng": 129.2566181
+        },
+        {
+          "lat": 35.544412,
+          "lng": 129.2565873
+        },
+        {
+          "lat": 35.5444564,
+          "lng": 129.2567912
+        }
+      ]
+    },
+    {
+      "id": "e332",
+      "from": "n266",
+      "to": "n269",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e333",
+      "from": "n270",
+      "to": "n267",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e334",
+      "from": "n267",
+      "to": "n271",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e335",
+      "from": "n272",
+      "to": "n215",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e336",
+      "from": "n215",
+      "to": "n225",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e337",
+      "from": "n225",
+      "to": "n273",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e338",
+      "from": "n274",
+      "to": "n275",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5468664,
+          "lng": 129.255835
+        },
+        {
+          "lat": 35.5467734,
+          "lng": 129.2560234
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e339",
+      "from": "n274",
+      "to": "n229",
+      "surface": "path",
+      "shortcut": false,
+      "covered": true,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e340",
+      "from": "n275",
+      "to": "n276",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e341",
+      "from": "n276",
+      "to": "n62",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e342",
+      "from": "n62",
+      "to": "n277",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5463929,
+          "lng": 129.2560252
+        },
+        {
+          "lat": 35.5464094,
+          "lng": 129.2558181
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 기숙사에서 공대로 내려오는 길"
+    },
+    {
+      "id": "e343",
+      "from": "n169",
+      "to": "n278",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e344",
+      "from": "n278",
+      "to": "n279",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e345",
+      "from": "n133",
+      "to": "n264",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5457331,
+          "lng": 129.2565203
+        }
+      ]
+    },
+    {
+      "id": "e346",
+      "from": "n173",
+      "to": "n280",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5448096,
+          "lng": 129.2562774
+        },
+        {
+          "lat": 35.5448501,
+          "lng": 129.2563513
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e347",
+      "from": "n280",
+      "to": "n281",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e348",
+      "from": "n112",
+      "to": "n282",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e349",
+      "from": "n223",
+      "to": "n283",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e350",
+      "from": "n283",
+      "to": "n221",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e351",
+      "from": "n283",
+      "to": "n284",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e352",
+      "from": "n285",
+      "to": "n221",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e353",
+      "from": "n163",
+      "to": "n286",
+      "surface": "road",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e354",
+      "from": "n287",
+      "to": "n69",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm"
+    },
+    {
+      "id": "e355",
+      "from": "n69",
+      "to": "n288",
+      "surface": "stairs",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5466783,
+          "lng": 129.2579446
+        }
+      ]
+    },
+    {
+      "id": "e356",
+      "from": "n264",
+      "to": "n281",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5451024,
+          "lng": 129.2564291
+        }
+      ]
+    },
+    {
+      "id": "e357",
+      "from": "n281",
+      "to": "n282",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5448863,
+          "lng": 129.256582
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e358",
+      "from": "n282",
+      "to": "n289",
+      "surface": "path",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e359",
+      "from": "n289",
+      "to": "n268",
+      "surface": "stairs",
+      "shortcut": true,
+      "covered": false,
+      "connector": false,
+      "source": "osm",
+      "via": [
+        {
+          "lat": 35.5447545,
+          "lng": 129.2566719
+        }
+      ],
+      "note": "캠퍼스 안내도에 노란색으로 칠해진 지름길 — 건축관에서 해송홀로 빠지는 길"
+    },
+    {
+      "id": "e360",
+      "from": "b1",
+      "to": "n120",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 19m 를 곧게 이었다"
+    },
+    {
+      "id": "e361",
+      "from": "b1",
+      "to": "n123",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 37m 를 곧게 이었다"
+    },
+    {
+      "id": "e362",
+      "from": "b2",
+      "to": "n36",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 16m 를 곧게 이었다"
+    },
+    {
+      "id": "e363",
+      "from": "b3",
+      "to": "n265",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 16m 를 곧게 이었다"
+    },
+    {
+      "id": "e364",
+      "from": "b3",
+      "to": "n178",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 40m 를 곧게 이었다"
+    },
+    {
+      "id": "e365",
+      "from": "b4",
+      "to": "n157",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 30m 를 곧게 이었다"
+    },
+    {
+      "id": "e366",
+      "from": "b5",
+      "to": "n158",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 32m 를 곧게 이었다"
+    },
+    {
+      "id": "e367",
+      "from": "b6",
+      "to": "n151",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 25m 를 곧게 이었다"
+    },
+    {
+      "id": "e368",
+      "from": "b7",
+      "to": "n45",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 12m 를 곧게 이었다"
+    },
+    {
+      "id": "e369",
+      "from": "b8",
+      "to": "n214",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 25m 를 곧게 이었다"
+    },
+    {
+      "id": "e370",
+      "from": "b8",
+      "to": "n98",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 41m 를 곧게 이었다"
+    },
+    {
+      "id": "e371",
+      "from": "b9",
+      "to": "n211",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 23m 를 곧게 이었다"
+    },
+    {
+      "id": "e372",
+      "from": "b9",
+      "to": "n8",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 51m 를 곧게 이었다"
+    },
+    {
+      "id": "e373",
+      "from": "b10",
+      "to": "n212",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 22m 를 곧게 이었다"
+    },
+    {
+      "id": "e374",
+      "from": "b10",
+      "to": "n11",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 43m 를 곧게 이었다"
+    },
+    {
+      "id": "e375",
+      "from": "b11",
+      "to": "n86",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 27m 를 곧게 이었다"
+    },
+    {
+      "id": "e376",
+      "from": "b11",
+      "to": "n84",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 31m 를 곧게 이었다"
+    },
+    {
+      "id": "e377",
+      "from": "b12",
+      "to": "n73",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 35m 를 곧게 이었다"
+    },
+    {
+      "id": "e378",
+      "from": "b13",
+      "to": "n133",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 21m 를 곧게 이었다"
+    },
+    {
+      "id": "e379",
+      "from": "b13",
+      "to": "n61",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 48m 를 곧게 이었다"
+    },
+    {
+      "id": "e380",
+      "from": "b14",
+      "to": "n78",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 32m 를 곧게 이었다"
+    },
+    {
+      "id": "e381",
+      "from": "b15",
+      "to": "n31",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 15m 를 곧게 이었다"
+    },
+    {
+      "id": "e382",
+      "from": "b16",
+      "to": "n274",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 19m 를 곧게 이었다"
+    },
+    {
+      "id": "e383",
+      "from": "b16",
+      "to": "n167",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 37m 를 곧게 이었다"
+    },
+    {
+      "id": "e384",
+      "from": "b17",
+      "to": "n172",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 16m 를 곧게 이었다"
+    },
+    {
+      "id": "e385",
+      "from": "b18",
+      "to": "n145",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 24m 를 곧게 이었다"
+    },
+    {
+      "id": "e386",
+      "from": "b19",
+      "to": "n205",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 17m 를 곧게 이었다"
+    },
+    {
+      "id": "e387",
+      "from": "b20",
+      "to": "n148",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 34m 를 곧게 이었다"
+    },
+    {
+      "id": "e388",
+      "from": "b21",
+      "to": "n148",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 39m 를 곧게 이었다"
+    },
+    {
+      "id": "e389",
+      "from": "b22",
+      "to": "n85",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 29m 를 곧게 이었다"
+    },
+    {
+      "id": "e390",
+      "from": "b23",
+      "to": "n189",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 23m 를 곧게 이었다"
+    },
+    {
+      "id": "e391",
+      "from": "b23",
+      "to": "n11",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 49m 를 곧게 이었다"
+    },
+    {
+      "id": "e392",
+      "from": "b24",
+      "to": "n26",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 33m 를 곧게 이었다"
+    },
+    {
+      "id": "e393",
+      "from": "b24",
+      "to": "n23",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 46m 를 곧게 이었다"
+    },
+    {
+      "id": "e394",
+      "from": "b25",
+      "to": "n183",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 19m 를 곧게 이었다"
+    },
+    {
+      "id": "e395",
+      "from": "b25",
+      "to": "n242",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 59m 를 곧게 이었다"
+    },
+    {
+      "id": "e396",
+      "from": "b26",
+      "to": "n191",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 31m 를 곧게 이었다"
+    },
+    {
+      "id": "e397",
+      "from": "b26",
+      "to": "n242",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 46m 를 곧게 이었다"
+    },
+    {
+      "id": "e398",
+      "from": "b27",
+      "to": "n76",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 15m 를 곧게 이었다"
+    },
+    {
+      "id": "e399",
+      "from": "b28",
+      "to": "n84",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 23m 를 곧게 이었다"
+    },
+    {
+      "id": "e400",
+      "from": "b29",
+      "to": "n22",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 16m 를 곧게 이었다"
+    },
+    {
+      "id": "e401",
+      "from": "b30",
+      "to": "n268",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 7m 를 곧게 이었다"
+    },
+    {
+      "id": "e402",
+      "from": "b30",
+      "to": "n34",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 40m 를 곧게 이었다"
+    },
+    {
+      "id": "e403",
+      "from": "b31",
+      "to": "n203",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 18m 를 곧게 이었다"
+    },
+    {
+      "id": "e404",
+      "from": "b31",
+      "to": "n19",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 31m 를 곧게 이었다"
+    },
+    {
+      "id": "e405",
+      "from": "b32",
+      "to": "n241",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 30m 를 곧게 이었다"
+    },
+    {
+      "id": "e406",
+      "from": "b33",
+      "to": "n20",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 15m 를 곧게 이었다"
+    },
+    {
+      "id": "e407",
+      "from": "b33",
+      "to": "n13",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 22m 를 곧게 이었다"
+    },
+    {
+      "id": "e408",
+      "from": "b34",
+      "to": "n165",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 31m 를 곧게 이었다"
+    },
+    {
+      "id": "e409",
+      "from": "b34",
+      "to": "n166",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 45m 를 곧게 이었다"
+    },
+    {
+      "id": "e410",
+      "from": "b35",
+      "to": "n138",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 15m 를 곧게 이었다"
+    },
+    {
+      "id": "e411",
+      "from": "b36",
+      "to": "n137",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 19m 를 곧게 이었다"
+    },
+    {
+      "id": "e412",
+      "from": "b37",
+      "to": "n277",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 21m 를 곧게 이었다"
+    },
+    {
+      "id": "e413",
+      "from": "b37",
+      "to": "n57",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 38m 를 곧게 이었다"
+    },
+    {
+      "id": "e414",
+      "from": "b38",
+      "to": "n219",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 27m 를 곧게 이었다"
+    },
+    {
+      "id": "e415",
+      "from": "b38",
+      "to": "n97",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 33m 를 곧게 이었다"
+    },
+    {
+      "id": "e416",
+      "from": "b39",
+      "to": "n160",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 44m 를 곧게 이었다"
+    },
+    {
+      "id": "e417",
+      "from": "b40",
+      "to": "n42",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 16m 를 곧게 이었다"
+    },
+    {
+      "id": "e418",
+      "from": "b41",
+      "to": "n89",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 35m 를 곧게 이었다"
+    },
+    {
+      "id": "e419",
+      "from": "b42",
+      "to": "n287",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 길까지 28m 를 곧게 이었다"
+    },
+    {
+      "id": "e420",
+      "from": "b42",
+      "to": "n68",
+      "surface": "path",
+      "shortcut": false,
+      "covered": false,
+      "connector": true,
+      "source": "assumed",
+      "note": "건물 중심에서 가장 가까운 차도까지 48m 를 곧게 이었다"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+dist
+node_modules
+pnpm-lock.yaml
+*.md
+public
+
+# 오버패스에서 받아 온 원본 덤프. 우리가 쓴 코드가 아니라 벤더 파일이다.
+scripts/osm-campus.json
