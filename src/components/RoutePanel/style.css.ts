@@ -32,12 +32,218 @@ export const panel = style([
         left: 0,
         right: 0,
         width: 'auto',
-        maxHeight: '62%',
+        /*
+         * 접을 수 있게 되었으니 펼친 높이는 넉넉히 준다. 접으면 손잡이와 요약
+         * 한 줄만 남고 지도가 화면을 거의 다 쓴다.
+         */
+        maxHeight: '76%',
+        paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         borderRadius: `${layout.radius.md} ${layout.radius.md} 0 0`,
         borderBottom: 'none',
       },
     },
   },
+]);
+
+/**
+ * 지도에서 곳을 고르는 동안. 화면 밖으로 내려보낸다.
+ *
+ * 폰에서만 치운다 — 넓은 화면에서는 패널이 지도를 가리지 않으니 그대로 두는 게
+ * 낫다. 고르는 중에도 목록이 눈에 보인다.
+ */
+export const panelHidden = style([
+  panel,
+  {
+    '@media': {
+      [`screen and (max-width: ${screen.phone})`]: {
+        transform: 'translateY(105%)',
+        /* 내려간 시트가 지도 손짓을 가로채면 곤란하다. */
+        pointerEvents: 'none',
+      },
+    },
+  },
+]);
+
+/* ── 손잡이와 요약 한 줄 (폰) ───────────────────────────────────────────── */
+
+/**
+ * 접힌 시트에서 유일하게 보이는 부분.
+ *
+ * 끌어서 접고 펴고, 그냥 눌러도 뒤집힌다. touchAction 을 끄지 않으면 브라우저가
+ * 이 드래그를 화면 스크롤로 가져가 버린다.
+ */
+export const handle = style([
+  flex.COLUMN_FLEX,
+  {
+    flexShrink: 0,
+    padding: '7px 0 10px',
+    touchAction: 'none',
+    cursor: 'grab',
+  },
+]);
+
+export const grip = style({
+  alignSelf: 'center',
+  width: '38px',
+  height: '4px',
+  borderRadius: layout.radius.pill,
+  backgroundColor: theme.gray[300],
+});
+
+export const bar = style([
+  flex.VERTICAL,
+  {
+    gap: '10px',
+    minHeight: '46px',
+    padding: `4px ${spacing.md} 0`,
+  },
+]);
+
+export const barText = style([
+  flex.COLUMN_FLEX,
+  { flex: 1, minWidth: 0, gap: '1px' },
+]);
+
+export const barMetric = style([
+  flex.VERTICAL,
+  { gap: '6px', color: theme.textPrimary },
+]);
+
+export const barValue = style([font.metric, { fontSize: '19px' }]);
+
+export const barSub = style([font.metricSmall, { color: theme.textSecondary }]);
+
+export const barNote = style([
+  font.body,
+  {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    color: theme.textSecondary,
+  },
+]);
+
+export const barWarn = style([barNote, { color: theme.warn }]);
+
+export const chevron = style([
+  flex.CENTER,
+  {
+    flexShrink: 0,
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+    fontSize: '11px',
+    color: theme.textTertiary,
+
+    ':hover': { backgroundColor: theme.gray[100], color: theme.textPrimary },
+  },
+]);
+
+/* ── 안내 시작 ─────────────────────────────────────────────────────────── */
+
+export const start = style([
+  font.bodyStrong,
+  {
+    flexShrink: 0,
+    padding: '9px 16px',
+    borderRadius: layout.radius.pill,
+    backgroundColor: theme.accent,
+    color: theme.onAccent,
+
+    ':hover': { opacity: 0.9 },
+  },
+]);
+
+export const startOn = style([
+  start,
+  { backgroundColor: theme.gray[900], color: theme.gray[0] },
+]);
+
+/** 넓은 화면 패널 안에 놓는 같은 단추. 폭을 다 쓴다. */
+export const startRow = style({ padding: `0 ${spacing.md} 12px` });
+
+export const startWide = style([start, { display: 'block', width: '100%' }]);
+export const startWideOn = style([
+  startWide,
+  { backgroundColor: theme.gray[900], color: theme.gray[0] },
+]);
+
+/* ── 폰에서 고르는 칸 ──────────────────────────────────────────────────── */
+
+export const phoneFields = style([
+  flex.VERTICAL,
+  { gap: spacing.sm, padding: `${spacing.md} ${spacing.md} 10px` },
+]);
+
+export const phoneStack = style([
+  flex.COLUMN_FLEX,
+  { flex: 1, minWidth: 0, gap: '6px' },
+]);
+
+const pickerBase = style([
+  flex.VERTICAL,
+  {
+    gap: '10px',
+    width: '100%',
+    /* 손가락으로 눌러도 안 빗나가는 최소 크기. */
+    minHeight: '44px',
+    padding: '0 12px',
+    borderRadius: layout.radius.sm,
+    border: `1px solid ${theme.outline}`,
+    backgroundColor: theme.surface,
+    textAlign: 'left',
+
+    ':hover': { borderColor: theme.gray[300] },
+  },
+]);
+
+export const pickerField = style([pickerBase]);
+export const pickerFieldSet = style([
+  pickerBase,
+  { borderColor: theme.accent },
+]);
+
+export const pickerLabel = style([
+  font.caption,
+  { flexShrink: 0, width: '26px', color: theme.textTertiary },
+]);
+
+export const pickerValue = style([
+  font.bodyStrong,
+  {
+    flex: 1,
+    minWidth: 0,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    color: theme.textPrimary,
+  },
+]);
+
+export const pickerEmpty = style([
+  pickerValue,
+  { fontWeight: 400, color: theme.textTertiary },
+]);
+
+export const phoneSwap = style([
+  flex.CENTER,
+  {
+    flexShrink: 0,
+    width: '44px',
+    alignSelf: 'stretch',
+    borderRadius: layout.radius.sm,
+    border: `1px solid ${theme.outline}`,
+    fontSize: '17px',
+    color: theme.textSecondary,
+
+    ':hover': { color: theme.textPrimary, borderColor: theme.gray[300] },
+  },
+]);
+
+/** 손잡이 아래 나머지 전부. 시트를 접으면 이 덩이가 0 으로 눌린다. */
+export const body = style([
+  flex.COLUMN_FLEX,
+  { flex: 1, minHeight: 0, overflow: 'hidden' },
 ]);
 
 export const header = style([

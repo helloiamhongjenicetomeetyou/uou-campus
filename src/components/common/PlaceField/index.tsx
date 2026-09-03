@@ -1,5 +1,6 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import type { CampusNode } from '@/types/campus';
+import { matchesPlace } from '@/utils/place';
 import * as s from './style.css';
 
 interface Props {
@@ -9,15 +10,6 @@ interface Props {
   placeholder?: string;
   onChange: (node: CampusNode | null) => void;
 }
-
-/** 이름·별칭·건물번호 아무거나 걸리면 후보로 올린다. */
-const matches = (node: CampusNode, query: string) => {
-  const q = query.trim().toLowerCase();
-  if (!q) return true;
-  if (String(node.no ?? '') === q) return true;
-  if (node.name.toLowerCase().includes(q)) return true;
-  return (node.aliases ?? []).some((a) => a.toLowerCase().includes(q));
-};
 
 const MAX_SUGGESTIONS = 8;
 
@@ -29,7 +21,8 @@ const PlaceField = ({ label, places, value, placeholder, onChange }: Props) => {
   const listId = useId();
 
   const suggestions = useMemo(
-    () => places.filter((p) => matches(p, query)).slice(0, MAX_SUGGESTIONS),
+    () =>
+      places.filter((p) => matchesPlace(p, query)).slice(0, MAX_SUGGESTIONS),
     [places, query],
   );
 

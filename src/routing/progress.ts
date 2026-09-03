@@ -30,6 +30,14 @@ export const OFF_ROUTE_METERS = 35;
 export const offRouteLimit = (accuracy: number | null): number =>
   Math.max(OFF_ROUTE_METERS, (accuracy ?? 0) * 1.5);
 
+/**
+ * 이 안쪽이면 도착으로 본다.
+ *
+ * 건물 좌표는 출입구가 아니라 건물 한가운데에 찍혀 있다. 정확히 0m 를 기다리면
+ * 문 앞에 다 와서도 안내가 안 끝난다.
+ */
+export const ARRIVED_METERS = 15;
+
 /** 선분 위에서 점에 가장 가까운 자리를, 0~1 비율로. */
 const projectOnSegment = (
   point: LatLng,

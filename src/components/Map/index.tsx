@@ -18,6 +18,7 @@ import {
   shortcutOverlayStyle,
 } from '@/map/mapStyle';
 import { endpointIcon, hereIcon, junctionIcon, placeIcon } from '@/map/icons';
+import type { SheetState } from '@/components/RoutePanel';
 import * as s from './style.css';
 
 interface Props {
@@ -35,6 +36,12 @@ interface Props {
    * 잰 값을 상태로 들고 돌면 순서가 꼬여서, 맞출 때 그 자리에서 읽는다.
    */
   panelRef: RefObject<HTMLElement | null>;
+  /** 시트가 접히고 펴지면 지도에 남는 자리가 달라진다. 그때 다시 맞춘다. */
+  sheet: SheetState;
+  /** 안내 중. 지도가 현위치를 계속 따라간다. */
+  follow: boolean;
+  /** 지도에서 곳을 고르는 중. 어느 곳이든 누를 수 있게 캠퍼스 전체를 맞춘다. */
+  picking: boolean;
   editing: boolean;
   selectedId: string | null;
   onPickNode: (node: CampusNode) => void;
@@ -54,6 +61,14 @@ const JUNCTION_ZOOM = 17;
 /** 길찾기 패널이 옆이 아니라 아래로 내려가는 너비. style.css.ts 의 screen.phone. */
 const PANEL_BREAKPOINT = 768;
 
+/**
+ * 안내를 시작할 때 맞추는 배율.
+ *
+ * 여기서 한 번만 맞추고, 그 뒤로는 위치만 따라가며 배율은 손대지 않는다. 매번
+ * 다시 맞추면 걷는 사람이 손으로 넓혀 본 화면을 몇 초마다 되돌려 놓는 셈이 된다.
+ */
+const GUIDE_ZOOM = 18;
+
 const toLeaflet = (p: LatLng): L.LatLngTuple => [p.lat, p.lng];
 
 const CampusMap = ({
@@ -65,6 +80,9 @@ const CampusMap = ({
   here,
   progress,
   panelRef,
+  sheet,
+  follow,
+  picking,
   editing,
   selectedId,
   onPickNode,
@@ -75,7 +93,11 @@ const CampusMap = ({
   const [zoom, setZoom] = useState(CAMPUS_ZOOM);
   const holder = useRef<HTMLDivElement>(null);
   /** 지도를 만든 뒤에야 생기는 손잡이. 경로가 정해질 때 다시 부른다. */
-  const fitTo = useRef<(points: LatLng[]) => void>(() => {});
+  const fitTo = useRef<(points: LatLng[], remember?: boolean) => void>(
+    () => {},
+  );
+  /** 마지막으로 맞춘 대상. 시트가 움직이면 같은 것을 다시 맞춘다. */
+  const lastFit = useRef<LatLng[] | null>(null);
   const map = useRef<L.Map | null>(null);
   const baseLayer = useRef<L.LayerGroup | null>(null);
   const routeLayer = useRef<L.LayerGroup | null>(null);
@@ -91,6 +113,18 @@ const CampusMap = ({
   const nodesRef = useRef(graph.nodes);
   useEffect(() => {
     nodesRef.current = graph.nodes;
+  });
+
+  /* 따라가기를 켤 때 최신 위치를 봐야 하는데, 위치마다 다시 돌 필요는 없다. */
+  const hereRef = useRef(here);
+  useEffect(() => {
+    hereRef.current = here;
+  });
+
+  /* 맞출 때 시트가 지금 지도를 가리고 있는지 그 자리에서 봐야 한다. */
+  const sheetRef = useRef(sheet);
+  useEffect(() => {
+    sheetRef.current = sheet;
   });
 
   /* ── 지도 만들기 (한 번) ─────────────────────────────────────────────── */
@@ -134,21 +168,33 @@ const CampusMap = ({
      * 가리므로 그만큼 여백을 줘야 캠퍼스가 보이는 자리에 들어온다.
      * 높이를 짐작하면 틀린다 — 패널이 잰 실제 크기를 받아 쓴다.
      */
-    const fitPoints = (points: LatLng[]) => {
+    const fitPoints = (points: LatLng[], remember = true) => {
+      if (remember) lastFit.current = points;
       const box = boundsOf(points);
       const width = holder.current?.clientWidth ?? 0;
       const height = holder.current?.clientHeight ?? 0;
       if (!box || !width || !height) return;
 
-      /* 패널은 넓은 화면에선 왼쪽에, 좁은 화면에선 아래에 붙는다. */
-      const panel = panelRef.current?.getBoundingClientRect();
+      /*
+       * 패널은 넓은 화면에선 왼쪽에, 좁은 화면에선 아래에 붙는다. 화면 밖으로
+       * 내려보낸 시트는 아무것도 가리지 않으니 그때는 세지 않는다 — 여기서
+       * 잘못 세면 고르기로 들어갈 때 캠퍼스가 화면 위로 밀려 사라진다.
+       */
+      const covered = sheetRef.current !== 'hidden';
+      const panel = covered ? panelRef.current?.getBoundingClientRect() : null;
       const narrow = width <= PANEL_BREAKPOINT;
       const left = !narrow && panel ? Math.round(panel.width) + 32 : 0;
       const bottom = narrow && panel ? Math.round(panel.height) : 0;
 
-      /* 여백이 화면을 다 먹으면 fitBounds 가 최대 배율로 튄다. 남길 자리를 지킨다. */
+      /*
+       * 여백이 화면을 다 먹으면 fitBounds 가 최대 배율로 튄다. 남길 자리를 지킨다.
+       *
+       * 남기는 양은 고정 픽셀이 아니라 비율이다. 폰에서 시트를 펼치면 아래가
+       * 화면의 3/4 을 물기 때문에, 96px 만 남기면 캠퍼스가 실오라기 같은 띠에
+       * 눌려 들어가 한참 축소된 배율로 잡힌다. 절반쯤은 지도에 남겨 둔다.
+       */
       const cap = (value: number, limit: number) =>
-        Math.max(0, Math.min(value, limit - 96));
+        Math.max(0, Math.min(value, limit * 0.55));
 
       /* Leaflet 이 들고 있는 크기가 낡아 있으면 배율을 엉뚱하게 고른다. */
       instance.invalidateSize({ animate: false });
@@ -200,6 +246,35 @@ const CampusMap = ({
       map.current = null;
     };
   }, [panelRef]);
+
+  /*
+   * 시트가 움직이면 지도에 남는 자리가 달라진다. 접거나 내려보내 넓어진 만큼을
+   * 써서 다시 맞춰야 캠퍼스가 가운데로 온다. 따라가는 중에는 손대지 않는다 —
+   * 걷는 사람 화면이 몇 초마다 튀면 아무것도 못 본다.
+   *
+   * 고르는 중에는 마지막에 보던 자리가 아니라 캠퍼스 전체를 맞춘다. 어느 곳이든
+   * 누를 수 있어야 하는데, 방금 뽑은 경로에 맞춰 놓으면 그 바깥은 손이 안 닿는다.
+   * 그 맞춤은 기억해 두지 않는다 — 고르기가 끝나면 원래 보던 자리로 돌아간다.
+   */
+  useEffect(() => {
+    const instance = map.current;
+    if (!instance || follow) return;
+    instance.invalidateSize({ animate: false });
+    const all = [...nodesRef.current.values()];
+    if (picking) fitTo.current(all, false);
+    else fitTo.current(lastFit.current ?? all);
+  }, [sheet, follow, picking]);
+
+  /*
+   * 안내를 켜면 걷기 좋은 배율로 한 번 당긴다.
+   *
+   * 켜는 순간이 아니라 '위치가 처음 잡히는 순간' 이다. 당길 자리가 없는데 배율만
+   * 올리면 경로가 화면 밖으로 밀려나 아무것도 안 보인다.
+   */
+  const needsGuideZoom = useRef(false);
+  useEffect(() => {
+    needsGuideZoom.current = follow;
+  }, [follow]);
 
   /*
    * 출발·도착이 바뀌면 경로가 다 보이도록 맞춘다. 좁은 화면에서는 시트가
@@ -353,13 +428,23 @@ const CampusMap = ({
     }
 
     /*
-     * 걷다가 화면 밖으로 나가면 따라간다. 매번 가운데로 끌어오면 지도를 들여다볼
-     * 수가 없으니, 정말로 벗어났을 때만 옮긴다.
+     * 안내 중이면 계속 가운데에 둔다. 걸으면서 화면을 손으로 끌 수는 없다.
+     * 안내를 안 켰을 때는 정말로 화면을 벗어났을 때만 옮긴다 — 지도를 들여다보는
+     * 중에 몇 초마다 끌려가면 아무것도 볼 수 없다.
      */
-    if (!instance.getBounds().pad(-0.15).contains(toLeaflet(here))) {
+    if (follow && needsGuideZoom.current) {
+      needsGuideZoom.current = false;
+      instance.setView(
+        toLeaflet(here),
+        Math.max(instance.getZoom(), GUIDE_ZOOM),
+        { animate: false },
+      );
+    } else if (follow) {
+      instance.panTo(toLeaflet(here), { animate: false });
+    } else if (!instance.getBounds().pad(-0.15).contains(toLeaflet(here))) {
       instance.panTo(toLeaflet(here), { animate: false });
     }
-  }, [here]);
+  }, [here, follow]);
 
   return <div ref={holder} className={s.container} />;
 };

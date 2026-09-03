@@ -168,6 +168,22 @@ export const toDirections = (
   });
 };
 
+/**
+ * 꺾는 동작만 짧게. 걸으면서 흘깃 보는 배너에는 문장이 아니라 낱말이 맞다.
+ * 문장 전체는 목록에서 읽는다.
+ */
+const TURN_BRIEF: Record<Turn, string> = {
+  straight: '직진',
+  'slight-left': '왼쪽으로 살짝',
+  'slight-right': '오른쪽으로 살짝',
+  left: '왼쪽으로 꺾기',
+  right: '오른쪽으로 꺾기',
+  back: '왔던 쪽으로',
+};
+
+export const turnBrief = (step: DirectionStep): string =>
+  TURN_BRIEF[step.turn ?? 'straight'];
+
 /** 마지막 줄 뒤에 붙일 도착 안내. */
 export const arrivalText = (to: CampusNode): string =>
   `${to.name}${to.no ? ` (${to.no}번)` : ''} 도착`;

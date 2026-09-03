@@ -1,0 +1,235 @@
+import { style } from '@vanilla-extract/css';
+import { flex, font, layout, spacing, theme } from '@/styles';
+
+/*
+ * 폰에서 장소를 고르는 화면. 지도 위에 얹는 게 아니라 화면을 통째로 덮는다 —
+ * 손바닥만 한 지도에서 지름 22px 짜리 점을 찍어 맞히라는 건 무리다.
+ */
+export const sheet = style([
+  flex.COLUMN_FLEX,
+  {
+    position: 'fixed',
+    inset: 0,
+    zIndex: 60,
+    backgroundColor: theme.surface,
+    /* 아이폰 노치와 홈 바를 피한다. */
+    paddingTop: 'env(safe-area-inset-top, 0px)',
+    paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+  },
+]);
+
+export const head = style([
+  flex.VERTICAL,
+  {
+    flexShrink: 0,
+    gap: spacing.sm,
+    padding: `10px 10px 10px ${spacing.md}`,
+    borderBottom: `1px solid ${theme.outline}`,
+  },
+]);
+
+export const title = style([
+  font.sectionTitle,
+  { flex: 1, minWidth: 0, color: theme.textPrimary },
+]);
+
+export const close = style([
+  flex.CENTER,
+  {
+    flexShrink: 0,
+    width: '36px',
+    height: '36px',
+    borderRadius: '50%',
+    fontSize: '20px',
+    lineHeight: 1,
+    color: theme.textSecondary,
+
+    ':hover': { backgroundColor: theme.gray[100], color: theme.textPrimary },
+  },
+]);
+
+export const searchRow = style({
+  flexShrink: 0,
+  padding: `12px ${spacing.md}`,
+});
+
+export const search = style([
+  font.body,
+  {
+    width: '100%',
+    height: '44px',
+    padding: `0 ${spacing.md}`,
+    borderRadius: layout.radius.sm,
+    border: `1px solid ${theme.outline}`,
+    backgroundColor: theme.gray[50],
+    color: theme.textPrimary,
+
+    '::placeholder': { color: theme.textTertiary },
+    ':focus': { borderColor: theme.accent, backgroundColor: theme.surface },
+  },
+]);
+
+/* ── 빠른 선택 ─────────────────────────────────────────────────────────── */
+
+export const quick = style([
+  flex.COLUMN_FLEX,
+  {
+    flexShrink: 0,
+    gap: '6px',
+    padding: `0 ${spacing.md} 12px`,
+  },
+]);
+
+export const quickRow = style([
+  flex.VERTICAL,
+  {
+    gap: '10px',
+    width: '100%',
+    padding: '11px 12px',
+    borderRadius: layout.radius.sm,
+    border: `1px solid ${theme.outline}`,
+    textAlign: 'left',
+
+    ':hover': { borderColor: theme.accent, backgroundColor: theme.accentSoft },
+    ':disabled': { opacity: 0.45, cursor: 'default' },
+  },
+]);
+
+export const quickMark = style([
+  flex.CENTER,
+  {
+    flexShrink: 0,
+    width: '26px',
+    height: '26px',
+    borderRadius: '50%',
+    backgroundColor: theme.accentSoft,
+    color: theme.accent,
+    fontSize: '13px',
+  },
+]);
+
+export const quickText = style([
+  font.bodyStrong,
+  { flex: 1, minWidth: 0, color: theme.textPrimary },
+]);
+
+export const quickNote = style([
+  font.caption,
+  { flexShrink: 0, color: theme.textTertiary },
+]);
+
+/* ── 목록 ──────────────────────────────────────────────────────────────── */
+
+export const list = style({
+  flex: 1,
+  minHeight: 0,
+  overflowY: 'auto',
+  overscrollBehavior: 'contain',
+  WebkitOverflowScrolling: 'touch',
+  padding: `0 ${spacing.sm} ${spacing.lg}`,
+});
+
+export const group = style([
+  font.caption,
+  {
+    position: 'sticky',
+    top: 0,
+    zIndex: 1,
+    padding: `8px ${spacing.sm} 6px`,
+    backgroundColor: theme.surface,
+    color: theme.textTertiary,
+  },
+]);
+
+const rowBase = style([
+  flex.VERTICAL,
+  {
+    gap: '10px',
+    width: '100%',
+    /* 손가락으로 눌러도 안 빗나가게 44px 을 지킨다. */
+    minHeight: '48px',
+    padding: `8px ${spacing.sm}`,
+    borderRadius: layout.radius.sm,
+    textAlign: 'left',
+
+    ':hover': { backgroundColor: theme.gray[100] },
+  },
+]);
+
+export const row = style([rowBase]);
+
+export const rowOn = style([
+  rowBase,
+  {
+    backgroundColor: theme.accentSoft,
+    ':hover': { backgroundColor: theme.accentSoft },
+  },
+]);
+
+/** 반대편 칸에 이미 들어가 있는 곳. 눌러도 경로가 안 나오니 눌러 둔다. */
+export const rowTaken = style([rowBase, { opacity: 0.4 }]);
+
+export const no = style([
+  flex.CENTER,
+  font.caption,
+  {
+    flexShrink: 0,
+    width: '30px',
+    height: '30px',
+    borderRadius: layout.radius.sm,
+    backgroundColor: theme.gray[100],
+    color: theme.textSecondary,
+    fontWeight: 700,
+    fontVariantNumeric: 'tabular-nums',
+  },
+]);
+
+export const noEmpty = style([no, { color: theme.textTertiary }]);
+
+export const body = style([flex.COLUMN_FLEX, { flex: 1, minWidth: 0 }]);
+
+export const name = style([
+  font.body,
+  {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    color: theme.textPrimary,
+  },
+]);
+
+export const aliases = style([
+  font.caption,
+  {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    color: theme.textTertiary,
+  },
+]);
+
+export const tag = style([
+  font.caption,
+  {
+    flexShrink: 0,
+    padding: '2px 6px',
+    borderRadius: layout.radius.pill,
+    backgroundColor: theme.warnSoft,
+    color: theme.warn,
+    fontSize: '10px',
+  },
+]);
+
+export const here = style([
+  font.caption,
+  {
+    flexShrink: 0,
+    color: theme.accent,
+    fontVariantNumeric: 'tabular-nums',
+  },
+]);
+
+export const empty = style([
+  font.body,
+  { padding: `${spacing.lg} ${spacing.sm}`, color: theme.textTertiary },
+]);
