@@ -136,6 +136,13 @@ const EditorPanel = ({
   const [sending, setSending] = useState(false);
   const [said, setSaid] = useState<Said | null>(null);
 
+  /** 고른 곳에 붙어 있는 길의 수. 0 이면 길찾기에 안 잡힌다. */
+  const linkCount = selectedNode
+    ? doc.edges.filter(
+        (e) => e.from === selectedNode.id || e.to === selectedNode.id,
+      ).length
+    : 0;
+
   const publish = async () => {
     setSending(true);
     setSaid(null);
@@ -288,6 +295,17 @@ const EditorPanel = ({
                 {selectedNode.precision === 'approx' ? '근사치' : '맞춘 좌표'}
               </button>
             </div>
+            {/*
+              길에 안 이어진 곳은 목록에는 떠도 길찾기가 안 된다 — 도착지로
+              고르면 '이어진 길이 없습니다' 가 나온다. 찍어 두고 잇는 걸 잊기
+              쉬워서, 고른 그 자리에서 말해 준다.
+            */}
+            {linkCount === 0 && (
+              <p className={s.caution}>
+                아직 어떤 길과도 이어져 있지 않습니다. 「길 잇기」로 가까운
+                보행로와 이어야 길찾기에 나옵니다.
+              </p>
+            )}
             <button
               type="button"
               className={s.danger}

@@ -228,3 +228,15 @@ export const saidBad = style([
   said,
   { backgroundColor: theme.errorSoft, color: theme.error },
 ]);
+
+/** 아직 길에 안 이어진 곳이라고 일러 주는 줄. */
+export const caution = style([
+  font.caption,
+  {
+    padding: '7px 9px',
+    borderRadius: layout.radius.sm,
+    backgroundColor: theme.warnSoft,
+    color: theme.warn,
+    lineHeight: 1.55,
+  },
+]);
