@@ -528,8 +528,12 @@ Cloudflare 같은 리버스 프록시가 끼어 있는지 판단이 안 된다�
 네임서버가 가비아라 Vercel 이 확인할 길이 없어서 그렇게 표시됩니다. 프록시가 없는
 게 맞고, 실제로 인증서도 HSTS 도 정상입니다.
 
-코드에는 출처가 하나도 박혀 있지 않습니다 — 매니페스트의 `start_url` 도 아이콘 경로도
+코드에는 출처가 거의 박혀 있지 않습니다 — 매니페스트의 `start_url` 도 아이콘 경로도
 전부 루트 상대라, 도메인을 또 바꿔도 고칠 것이 없습니다.
+
+딱 한 군데 예외가 링크 미리보기(Open Graph) 태그입니다. 카톡·페이스북 크롤러는
+**상대 경로를 못 읽어서** `og:url` 과 `og:image` 만 절대 주소로 적어 뒀습니다
+([`index.html`](index.html)). 도메인을 바꾸면 이 두 줄은 손봐야 합니다.
 
 [`vercel.json`](vercel.json) 에는 새로고침용 리라이트 말고 헤더 두 줄이 더 있습니다.
 
@@ -635,6 +639,7 @@ pnpm build          # 타입 체크(tsc) 후 프로덕션 빌드
 pnpm preview        # 빌드 결과 미리보기
 pnpm seed           # campus.json 다시 만들기
 pnpm icons          # 앱 아이콘 다시 만들기
+pnpm og             # 링크 미리보기 그림(public/og.png) 다시 만들기
 pnpm lint           # ESLint
 pnpm format         # Prettier 적용
 ```
