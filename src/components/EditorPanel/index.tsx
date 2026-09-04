@@ -4,6 +4,7 @@ import type {
   CampusGraphDoc,
   CampusNode,
   EdgeSource,
+  NodeKind,
   Surface,
 } from '@/types/campus';
 import { SURFACE_LABEL } from '@/routing/cost';
@@ -25,6 +26,20 @@ interface Props {
   onReset: () => void;
   onImport: (doc: CampusGraphDoc) => void;
 }
+
+/**
+ * 지도에서 만든 지점은 길목으로 태어난다. 여기서 종류를 올려야 이름 있는 곳이 된다.
+ *
+ * 길목만 장소 목록에서 빠진다 (routing/graph.ts 의 places). 그래서 건물 출입구를
+ * 찍어 놓고 종류를 그대로 두면, 이름을 넣어도 검색에도 목록에도 안 나오고 평소
+ * 지도에서도 안 보인다 — 찍어 둔 사람만 아는 점이 된다.
+ */
+const KIND_LABEL: Record<NodeKind, string> = {
+  building: '건물',
+  place: '시설',
+  gate: '출입문',
+  junction: '길목 (목록에 안 나옴)',
+};
 
 const SOURCE_LABEL: Record<EdgeSource, string> = {
   osm: 'OpenStreetMap 실측',
@@ -98,7 +113,10 @@ const EditorPanel = ({
         <ol className={s.guide}>
           <li>길목은 지도를 확대해야 보입니다.</li>
           <li>표시를 끌어 옮기면 좌표가 맞춰집니다.</li>
-          <li>빈 곳을 누르면 길목이 새로 생깁니다.</li>
+          <li>
+            빈 곳을 누르면 <strong>길목</strong>이 생깁니다. 종류를 바꾸면
+            출입문·건물이 됩니다.
+          </li>
           <li>
             <button
               type="button"
@@ -128,6 +146,31 @@ const EditorPanel = ({
               고른 곳 <span className={s.id}>{selectedNode.id}</span>
             </h3>
             <label className={s.field}>
+              <span className={s.fieldLabel}>종류</span>
+              <select
+                className={s.input}
+                value={selectedNode.kind}
+                onChange={(e) => {
+                  const kind = e.target.value as NodeKind;
+                  const patch: Partial<CampusNode> = { kind };
+                  /*
+                   * 길목에서 이름 있는 곳으로 올릴 때 이름이 비어 있으면 채워 준다.
+                   * 빈 이름으로 목록에 오르면 고를 수 없는 빈 줄이 하나 생긴다.
+                   */
+                  if (kind !== 'junction' && !selectedNode.name.trim()) {
+                    patch.name = '이름 없는 곳';
+                  }
+                  onUpdateNode(selectedNode.id, patch);
+                }}
+              >
+                {Object.entries(KIND_LABEL).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className={s.field}>
               <span className={s.fieldLabel}>이름</span>
               <input
                 className={s.input}
@@ -151,10 +194,29 @@ const EditorPanel = ({
                 }
               />
             </label>
-            <p className={s.meta}>
-              {selectedNode.lat.toFixed(6)}, {selectedNode.lng.toFixed(6)} ·{' '}
-              {selectedNode.precision === 'approx' ? '근사치' : '맞춘 좌표'}
-            </p>
+            <div className={s.field}>
+              <span className={s.fieldLabel}>좌표</span>
+              <span className={s.coord}>
+                {selectedNode.lat.toFixed(6)}, {selectedNode.lng.toFixed(6)}
+              </span>
+              <button
+                type="button"
+                className={
+                  selectedNode.precision === 'approx' ? s.approxOn : s.action
+                }
+                title="안내도만 보고 찍은 자리라면 근사치로 표시해 두세요"
+                onClick={() =>
+                  onUpdateNode(selectedNode.id, {
+                    precision:
+                      selectedNode.precision === 'approx'
+                        ? 'surveyed'
+                        : 'approx',
+                  })
+                }
+              >
+                {selectedNode.precision === 'approx' ? '근사치' : '맞춘 좌표'}
+              </button>
+            </div>
             <button
               type="button"
               className={s.danger}

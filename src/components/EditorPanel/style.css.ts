@@ -191,3 +191,22 @@ export const danger = style([
     ':hover': { borderColor: theme.error },
   },
 ]);
+
+/** 좌표 줄. 오른쪽에 근사 딱지가 붙는다. */
+export const coord = style([meta, { flex: 1, minWidth: 0 }]);
+
+/**
+ * '이 좌표는 아직 못 믿는다' 고 스스로 적어 두는 딱지.
+ *
+ * 안내도만 보고 대충 찍은 자리가 실측과 같은 얼굴을 하고 있으면, 나중에 무엇을
+ * 걸어 보고 확인해야 하는지 알 수가 없다.
+ */
+export const approxOn = style([
+  action,
+  {
+    borderColor: theme.warn,
+    backgroundColor: theme.warnSoft,
+    color: theme.warn,
+    ':hover': { borderColor: theme.warn, color: theme.warn },
+  },
+]);
