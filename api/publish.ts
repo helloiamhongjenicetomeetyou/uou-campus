@@ -28,7 +28,7 @@ interface Env {
 
 const env: Env = (globalThis as { process?: { env?: Env } }).process?.env ?? {};
 
-const REPO = env.GITHUB_REPO ?? 'helloiamhongjenicetomeetyou/uou-campus-route';
+const REPO = env.GITHUB_REPO ?? 'helloiamhongjenicetomeetyou/uou-campus';
 const BRANCH = env.GITHUB_BRANCH ?? 'main';
 const FILE = 'src/data/campus.json';
 
@@ -138,7 +138,7 @@ const github = async (path: string, init: RequestInit = {}) =>
       Authorization: `Bearer ${env.GITHUB_TOKEN}`,
       Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'uou-campus-route',
+      'User-Agent': 'uou-campus',
       ...(init.body ? { 'Content-Type': 'application/json' } : {}),
     },
   });
