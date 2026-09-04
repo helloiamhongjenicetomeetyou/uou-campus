@@ -2333,7 +2333,10 @@
       "kind": "building",
       "name": "전기/컴퓨터공학관",
       "no": 7,
-      "aliases": ["전컴관", "ICT융합학부"],
+      "aliases": [
+        "전컴관",
+        "ICT융합학부"
+      ],
       "lat": 35.5441998,
       "lng": 129.2557169,
       "precision": "surveyed",
@@ -2354,7 +2357,9 @@
       "kind": "building",
       "name": "조선해양공학관",
       "no": 41,
-      "aliases": ["해양공학관"],
+      "aliases": [
+        "해양공학관"
+      ],
       "lat": 35.5450584,
       "lng": 129.2518869,
       "precision": "surveyed",
@@ -2365,7 +2370,9 @@
       "kind": "building",
       "name": "해양공학수조",
       "no": 27,
-      "aliases": ["해양공학수조"],
+      "aliases": [
+        "해양공학수조"
+      ],
       "lat": 35.5446873,
       "lng": 129.2521653,
       "precision": "surveyed",
@@ -2406,7 +2413,9 @@
       "kind": "building",
       "name": "아산도서관",
       "no": 16,
-      "aliases": ["도서관"],
+      "aliases": [
+        "도서관"
+      ],
       "lat": 35.5431717,
       "lng": 129.2581479,
       "precision": "surveyed",
@@ -2417,7 +2426,9 @@
       "kind": "building",
       "name": "아산도서관 신관",
       "no": 40,
-      "aliases": ["도서관신관"],
+      "aliases": [
+        "도서관신관"
+      ],
       "lat": 35.5425503,
       "lng": 129.258362,
       "precision": "surveyed",
@@ -2428,7 +2439,10 @@
       "kind": "building",
       "name": "미술대학",
       "no": 28,
-      "aliases": ["미대", "예술관"],
+      "aliases": [
+        "미대",
+        "예술관"
+      ],
       "lat": 35.5431887,
       "lng": 129.2541987,
       "precision": "surveyed",
@@ -2479,7 +2493,9 @@
       "kind": "building",
       "name": "청운학사 무거관",
       "no": 25,
-      "aliases": ["기숙사"],
+      "aliases": [
+        "기숙사"
+      ],
       "lat": 35.5470322,
       "lng": 129.2557217,
       "precision": "surveyed",
@@ -2490,7 +2506,9 @@
       "kind": "building",
       "name": "청운학사 목련관",
       "no": 38,
-      "aliases": ["기숙사"],
+      "aliases": [
+        "기숙사"
+      ],
       "lat": 35.5475223,
       "lng": 129.2557609,
       "precision": "surveyed",
@@ -2501,7 +2519,9 @@
       "kind": "building",
       "name": "기계항공관",
       "no": 2,
-      "aliases": ["기항관"],
+      "aliases": [
+        "기항관"
+      ],
       "lat": 35.5450094,
       "lng": 129.254998,
       "precision": "surveyed",
@@ -2512,7 +2532,9 @@
       "kind": "building",
       "name": "산학협력리더스홀",
       "no": 5,
-      "aliases": ["리더스홀"],
+      "aliases": [
+        "리더스홀"
+      ],
       "lat": 35.5440354,
       "lng": 129.2545192,
       "precision": "surveyed",
@@ -2533,7 +2555,9 @@
       "kind": "building",
       "name": "재료/산업공학관",
       "no": 18,
-      "aliases": ["재료산업공학관"],
+      "aliases": [
+        "재료산업공학관"
+      ],
       "lat": 35.5447529,
       "lng": 129.2538548,
       "precision": "surveyed",
@@ -2544,7 +2568,10 @@
       "kind": "building",
       "name": "음악대학",
       "no": 29,
-      "aliases": ["음대", "예술관"],
+      "aliases": [
+        "음대",
+        "예술관"
+      ],
       "lat": 35.5435451,
       "lng": 129.2541147,
       "precision": "surveyed",
@@ -2565,7 +2592,9 @@
       "kind": "building",
       "name": "생활과학관",
       "no": 37,
-      "aliases": ["생과관"],
+      "aliases": [
+        "생과관"
+      ],
       "lat": 35.5425686,
       "lng": 129.2554316,
       "precision": "surveyed",
@@ -2576,7 +2605,9 @@
       "kind": "building",
       "name": "식물원",
       "no": 34,
-      "aliases": ["식물원"],
+      "aliases": [
+        "식물원"
+      ],
       "lat": 35.541761,
       "lng": 129.2571838,
       "precision": "surveyed",
@@ -2587,7 +2618,9 @@
       "kind": "building",
       "name": "사회과학관",
       "no": 15,
-      "aliases": ["사과관"],
+      "aliases": [
+        "사과관"
+      ],
       "lat": 35.5419032,
       "lng": 129.2576067,
       "precision": "surveyed",
@@ -2617,7 +2650,9 @@
       "id": "b29",
       "kind": "building",
       "name": "박물관",
-      "aliases": ["박물관"],
+      "aliases": [
+        "박물관"
+      ],
       "lat": 35.542994,
       "lng": 129.2557759,
       "precision": "surveyed",
@@ -2628,7 +2663,9 @@
       "kind": "building",
       "name": "해송홀",
       "no": 9,
-      "aliases": ["대학회관"],
+      "aliases": [
+        "대학회관"
+      ],
       "lat": 35.544678,
       "lng": 129.2566273,
       "precision": "surveyed",
@@ -2659,7 +2696,9 @@
       "kind": "building",
       "name": "자연과학관",
       "no": 8,
-      "aliases": ["자과관"],
+      "aliases": [
+        "자과관"
+      ],
       "lat": 35.5428907,
       "lng": 129.2566837,
       "precision": "surveyed",
@@ -2670,7 +2709,9 @@
       "kind": "building",
       "name": "청운학사 기린관",
       "no": 45,
-      "aliases": ["기숙사"],
+      "aliases": [
+        "기숙사"
+      ],
       "lat": 35.5467459,
       "lng": 129.2568557,
       "precision": "surveyed",
@@ -2691,7 +2732,9 @@
       "kind": "building",
       "name": "공학행정관",
       "no": 3,
-      "aliases": ["공행관"],
+      "aliases": [
+        "공행관"
+      ],
       "lat": 35.545113,
       "lng": 129.2557466,
       "precision": "surveyed",
@@ -2712,7 +2755,10 @@
       "kind": "building",
       "name": "서점 및 북카페",
       "no": 36,
-      "aliases": ["서점", "북카페"],
+      "aliases": [
+        "서점",
+        "북카페"
+      ],
       "lat": 35.5447341,
       "lng": 129.2582468,
       "precision": "surveyed",
@@ -2722,7 +2768,9 @@
       "id": "b39",
       "kind": "building",
       "name": "KVN 울산 전파천문대",
-      "aliases": ["전파천문대"],
+      "aliases": [
+        "전파천문대"
+      ],
       "lat": 35.5457751,
       "lng": 129.2500275,
       "precision": "surveyed",
@@ -2753,11 +2801,21 @@
       "kind": "building",
       "name": "KCC관",
       "no": 46,
-      "aliases": ["KCC관"],
+      "aliases": [
+        "KCC관"
+      ],
       "lat": 35.5463517,
       "lng": 129.2580921,
       "precision": "surveyed",
       "note": "건물 중심 좌표. 출입구 위치와는 다르다."
+    },
+    {
+      "id": "j-new-1",
+      "kind": "gate",
+      "name": "무거관 후문",
+      "lat": 35.54718104739154,
+      "lng": 129.25575971603396,
+      "precision": "surveyed"
     }
   ],
   "edges": [
