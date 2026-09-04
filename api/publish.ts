@@ -14,9 +14,22 @@
  *   GITHUB_REPO    'owner/repo'. 없으면 아래 기본값
  */
 
-const REPO =
-  process.env.GITHUB_REPO ?? 'helloiamhongjenicetomeetyou/uou-campus-route';
-const BRANCH = process.env.GITHUB_BRANCH ?? 'main';
+/*
+ * 환경변수를 globalThis 를 거쳐 읽는다.
+ *
+ * process 를 그냥 쓰면 node 타입이 있어야 컴파일된다. 이 파일은 우리 tsc 말고
+ * 배포 쪽에서도 한 번 더 검사받는데, 그쪽이 어느 설정을 집는지는 우리가 못 정한다.
+ * 실제로 node 타입 없이 검사돼 빌드가 통째로 깨진 적이 있다. 돌아가는 환경은
+ * 그대로 Node 라 값은 똑같이 읽힌다.
+ */
+interface Env {
+  [key: string]: string | undefined;
+}
+
+const env: Env = (globalThis as { process?: { env?: Env } }).process?.env ?? {};
+
+const REPO = env.GITHUB_REPO ?? 'helloiamhongjenicetomeetyou/uou-campus-route';
+const BRANCH = env.GITHUB_BRANCH ?? 'main';
 const FILE = 'src/data/campus.json';
 
 /*
@@ -105,11 +118,24 @@ const sameSecret = (a: string, b: string) => {
   return diff === 0;
 };
 
+/**
+ * GitHub 의 파일 API 는 내용을 base64 로 받는다.
+ *
+ * Buffer 를 안 쓰는 것도 같은 까닭이다 — TextEncoder 와 btoa 는 브라우저 쪽
+ * 타입에도 Node 쪽 타입에도 있어서, 어느 설정으로 검사해도 통과한다.
+ */
+const toBase64 = (text: string): string => {
+  const bytes = new TextEncoder().encode(text);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+};
+
 const github = async (path: string, init: RequestInit = {}) =>
   fetch(`https://api.github.com${path}`, {
     ...init,
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
       Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
       'User-Agent': 'uou-campus-route',
@@ -133,8 +159,8 @@ const handler = async (req: Req, res: Res) => {
     return;
   }
 
-  const secret = process.env.EDIT_PASSWORD;
-  const token = process.env.GITHUB_TOKEN;
+  const secret = env.EDIT_PASSWORD;
+  const token = env.GITHUB_TOKEN;
   if (!secret || !token) {
     res.status(503).json({ error: '이 서버에는 저장이 설정돼 있지 않습니다' });
     return;
@@ -195,7 +221,7 @@ const handler = async (req: Req, res: Res) => {
     method: 'PUT',
     body: JSON.stringify({
       message,
-      content: Buffer.from(text, 'utf8').toString('base64'),
+      content: toBase64(text),
       sha,
       branch: BRANCH,
     }),
