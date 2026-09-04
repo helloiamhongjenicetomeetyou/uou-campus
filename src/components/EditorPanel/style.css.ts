@@ -173,6 +173,7 @@ export const action = style([
     cursor: 'pointer',
 
     ':hover': { borderColor: theme.gray[300], color: theme.textPrimary },
+    ':disabled': { opacity: 0.45, cursor: 'default' },
   },
 ]);
 
@@ -209,4 +210,21 @@ export const approxOn = style([
     color: theme.warn,
     ':hover': { borderColor: theme.warn, color: theme.warn },
   },
+]);
+
+/** 모두에게 저장한 결과. 성공과 실패를 색으로 가른다. */
+export const said = style([
+  font.caption,
+  {
+    padding: '7px 9px',
+    borderRadius: layout.radius.sm,
+    backgroundColor: theme.okSoft,
+    color: theme.ok,
+    lineHeight: 1.55,
+  },
+]);
+
+export const saidBad = style([
+  said,
+  { backgroundColor: theme.errorSoft, color: theme.error },
 ]);

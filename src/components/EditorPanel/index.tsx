@@ -59,6 +59,59 @@ const download = (doc: CampusGraphDoc) => {
   URL.revokeObjectURL(url);
 };
 
+interface Said {
+  ok: boolean;
+  text: string;
+}
+
+/**
+ * 고친 지도를 모두에게 내보낸다.
+ *
+ * 편집한 내용은 고친 사람 브라우저에만 남는다. 이걸 눌러야 저장소에 커밋되고,
+ * 다시 배포되고, 그때부터 모두가 같은 지도를 본다. 암호는 서버가 가지고 있고
+ * 여기서는 그저 실어 보낸다.
+ */
+const publishDoc = async (
+  doc: CampusGraphDoc,
+  password: string,
+  note: string,
+): Promise<Said> => {
+  let res: Response;
+  try {
+    res = await fetch('/api/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, note, doc }),
+    });
+  } catch {
+    return { ok: false, text: '서버에 닿지 못했습니다. 연결을 확인하세요.' };
+  }
+
+  /* 개발 서버에는 이 함수가 없다. 되돌림 규칙에 걸려 index.html 이 온다. */
+  if (!res.headers.get('content-type')?.includes('application/json')) {
+    return {
+      ok: false,
+      text: '이 환경에는 저장 기능이 없습니다 (개발 서버). 배포본에서 하세요.',
+    };
+  }
+
+  const data = (await res.json().catch(() => null)) as {
+    error?: string;
+    sha?: string;
+  } | null;
+
+  if (!res.ok) {
+    return {
+      ok: false,
+      text: data?.error ?? `저장하지 못했습니다 (${res.status})`,
+    };
+  }
+  return {
+    ok: true,
+    text: `저장했습니다${data?.sha ? ` (${data.sha})` : ''}. 배포가 끝나는 1분쯤 뒤부터 모두에게 보입니다.`,
+  };
+};
+
 const EditorPanel = ({
   doc,
   dirty,
@@ -77,6 +130,24 @@ const EditorPanel = ({
   const [copied, setCopied] = useState(false);
 
   const approxCount = doc.nodes.filter((n) => n.precision === 'approx').length;
+
+  const [password, setPassword] = useState('');
+  const [note, setNote] = useState('');
+  const [sending, setSending] = useState(false);
+  const [said, setSaid] = useState<Said | null>(null);
+
+  const publish = async () => {
+    setSending(true);
+    setSaid(null);
+    const result = await publishDoc(doc, password, note);
+    setSaid(result);
+    setSending(false);
+    /* 성공했으면 암호를 화면에 남겨 둘 이유가 없다. */
+    if (result.ok) {
+      setPassword('');
+      setNote('');
+    }
+  };
 
   const copy = async () => {
     await navigator.clipboard.writeText(`${JSON.stringify(doc, null, 2)}\n`);
@@ -291,6 +362,45 @@ const EditorPanel = ({
             </button>
           </section>
         )}
+
+        <section className={s.section}>
+          <h3 className={s.sectionTitle}>모두에게 저장</h3>
+          <p className={s.meta}>
+            저장소에 커밋하고 다시 배포합니다. 그때부터 다른 사람 화면에도 이
+            지도가 나옵니다. 되돌리려면 커밋 하나를 되돌리면 됩니다.
+          </p>
+          <label className={s.field}>
+            <span className={s.fieldLabel}>암호</span>
+            <input
+              className={s.input}
+              type="password"
+              value={password}
+              autoComplete="off"
+              placeholder="저장할 사람만 아는 값"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <label className={s.field}>
+            <span className={s.fieldLabel}>메모</span>
+            <input
+              className={s.input}
+              value={note}
+              placeholder="무엇을 고쳤는지 — 커밋에 남습니다"
+              onChange={(e) => setNote(e.target.value)}
+            />
+          </label>
+          <div className={s.actions}>
+            <button
+              type="button"
+              className={s.action}
+              disabled={sending || password.length === 0}
+              onClick={publish}
+            >
+              {sending ? '보내는 중…' : '모두에게 저장'}
+            </button>
+          </div>
+          {said && <p className={said.ok ? s.said : s.saidBad}>{said.text}</p>}
+        </section>
 
         <section className={s.section}>
           <h3 className={s.sectionTitle}>내보내기</h3>
