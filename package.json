@@ -6,6 +6,7 @@
   "scripts": {
     "seed": "node scripts/seed-campus.mjs",
     "icons": "node scripts/make-icons.mjs",
+    "font": "node scripts/make-font.mjs",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

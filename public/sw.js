@@ -9,7 +9,7 @@
  * 껍데기만 미리 담고 나머지는 처음 받을 때 담는다.
  */
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = `campus-shell-${VERSION}`;
 const ASSETS = `campus-assets-${VERSION}`;
 const TILES = `campus-tiles-${VERSION}`;
@@ -24,7 +24,13 @@ self.addEventListener('install', (event) => {
     caches
       .open(SHELL)
       .then((cache) =>
-        cache.addAll(['/', '/manifest.webmanifest', '/icon.svg']),
+        cache.addAll([
+          '/',
+          '/manifest.webmanifest',
+          '/icon.svg',
+          /* 한글은 이 글꼴로 떨어진다. 신호가 죽은 자리에서도 글씨는 제 모양이게. */
+          '/fonts/pretendard-subset-v1.woff2',
+        ]),
       )
       .then(() => self.skipWaiting()),
   );
@@ -67,7 +73,8 @@ const handleNavigation = async (request) => {
 };
 
 /**
- * 빌드 산출물: 이름에 해시가 붙어 내용이 바뀌면 이름도 바뀐다. 있으면 그대로 쓴다.
+ * 이름이 내용을 담보하는 파일 — 빌드 산출물(해시)과 글꼴(판 번호).
+ * 내용이 바뀌면 이름도 바뀌므로, 있으면 다시 물어보지 않고 그대로 쓴다.
  */
 const handleImmutable = async (request) => {
   const cache = await caches.open(ASSETS);
@@ -147,7 +154,7 @@ self.addEventListener('fetch', (event) => {
 
   if (url.origin === self.location.origin) {
     event.respondWith(
-      url.pathname.startsWith('/assets/')
+      url.pathname.startsWith('/assets/') || url.pathname.startsWith('/fonts/')
         ? handleImmutable(request)
         : handleRevalidate(request),
     );
