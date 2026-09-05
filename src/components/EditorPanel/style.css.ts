@@ -1,13 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import {
-  elevation,
-  flex,
-  font,
-  layout,
-  screen,
-  spacing,
-  theme,
-} from '@/styles';
+import { elevation, flex, font, layout, media, spacing, theme } from '@/styles';
 
 export const panel = style([
   flex.COLUMN_FLEX,
@@ -25,12 +17,25 @@ export const panel = style([
     overflow: 'hidden',
 
     '@media': {
-      [`screen and (max-width: ${screen.phone})`]: {
+      [media.SHEET]: {
         top: spacing.sm,
         right: spacing.sm,
         left: spacing.sm,
         width: 'auto',
         maxHeight: '34%',
+      },
+
+      /*
+       * 가로에서는 위아래로 눌러 봐야 세 줄밖에 안 남는다. 길찾기 기둥 맞은편에
+       * 같은 높이로 세워 두면 좌표 칸과 길 잇기가 한눈에 들어온다.
+       */
+      [media.RAIL]: {
+        top: spacing.sm,
+        bottom: spacing.sm,
+        left: 'auto',
+        right: `calc(${spacing.sm} + env(safe-area-inset-right, 0px))`,
+        width: '288px',
+        maxHeight: 'none',
       },
     },
   },

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { screen } from '@/styles';
+import { media } from '@/styles';
 
 /**
  * 미디어 쿼리를 자바스크립트에서도 본다.
@@ -25,5 +25,14 @@ export const useMediaQuery = (query: string) => {
   return matches;
 };
 
-/** 길찾기 패널이 옆이 아니라 아래로 내려가는 너비. */
-export const usePhone = () => useMediaQuery(`(max-width: ${screen.phone})`);
+/** 세로로 든 폰. 길찾기 패널이 옆이 아니라 아래에서 올라오는 시트가 된다. */
+export const usePhone = () => useMediaQuery(media.SHEET);
+
+/**
+ * 가로로 돌린 폰. 폭은 남는데 높이가 모자란 화면이다.
+ *
+ * 시트로 올리면 지도가 한 줄도 안 남으니 패널을 왼쪽 기둥으로 세운다.
+ * 자리 잡는 것은 CSS 가 하고, 여기서 보는 것은 '드롭다운을 펼칠 자리가 없다'
+ * 는 갈림길 하나다.
+ */
+export const useLandscape = () => useMediaQuery(media.RAIL);

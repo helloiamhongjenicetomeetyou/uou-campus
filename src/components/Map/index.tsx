@@ -39,6 +39,14 @@ interface Props {
    * 잰 값을 상태로 들고 돌면 순서가 꼬여서, 맞출 때 그 자리에서 읽는다.
    */
   panelRef: RefObject<HTMLElement | null>;
+  /**
+   * 패널이 지도의 어느 쪽을 물고 있는지.
+   *
+   * 폭만 보고 짐작할 수 없다 — 가로로 돌린 폰은 폭이 850px 이라 넓은 화면처럼
+   * 보이지만, 패널은 아래가 아니라 왼쪽 기둥으로 서 있다. 화면 모양을 아는
+   * 쪽(App)이 알려 준다.
+   */
+  panelAt: 'left' | 'bottom';
   /** 시트가 접히고 펴지면 지도에 남는 자리가 달라진다. 그때 다시 맞춘다. */
   sheet: SheetState;
   /** 안내 중. 지도가 현위치를 계속 따라간다. */
@@ -60,9 +68,6 @@ const LABEL_ZOOM = 17;
  * 찍으면 지도가 아니라 점 무더기가 된다.
  */
 const JUNCTION_ZOOM = 17;
-
-/** 길찾기 패널이 옆이 아니라 아래로 내려가는 너비. style.css.ts 의 screen.phone. */
-const PANEL_BREAKPOINT = 768;
 
 /**
  * 안내를 시작할 때 맞추는 배율.
@@ -87,6 +92,7 @@ const CampusMap = ({
   accuracy,
   progress,
   panelRef,
+  panelAt,
   sheet,
   follow,
   picking,
@@ -135,6 +141,18 @@ const CampusMap = ({
     sheetRef.current = sheet;
   });
 
+  /* 패널이 옆인지 아래인지도 마찬가지로 맞추는 그 순간에 봐야 한다. */
+  const panelAtRef = useRef(panelAt);
+  useEffect(() => {
+    panelAtRef.current = panelAt;
+  });
+
+  /* 따라가는 중에 창이 바뀌면 맞추는 게 아니라 현위치로 되돌려야 한다. */
+  const followRef = useRef(follow);
+  useEffect(() => {
+    followRef.current = follow;
+  });
+
   /* ── 지도 만들기 (한 번) ─────────────────────────────────────────────── */
   useEffect(() => {
     if (!holder.current || map.current) return;
@@ -172,9 +190,9 @@ const CampusMap = ({
      * 튄다. 크기가 실제로 잡힌 뒤에 한 번만 맞춘다.
      */
     /*
-     * 길찾기 패널이 지도를 덮는다. 넓은 화면에선 왼쪽을, 좁은 화면에선 아래를
+     * 길찾기 패널이 지도를 덮는다. 세로로 든 폰에선 아래를, 그 밖에는 왼쪽을
      * 가리므로 그만큼 여백을 줘야 캠퍼스가 보이는 자리에 들어온다.
-     * 높이를 짐작하면 틀린다 — 패널이 잰 실제 크기를 받아 쓴다.
+     * 크기를 짐작하면 틀린다 — 패널이 잰 실제 크기를 받아 쓴다.
      */
     const fitPoints = (points: LatLng[], remember = true) => {
       if (remember) lastFit.current = points;
@@ -184,22 +202,22 @@ const CampusMap = ({
       if (!box || !width || !height) return;
 
       /*
-       * 패널은 넓은 화면에선 왼쪽에, 좁은 화면에선 아래에 붙는다. 화면 밖으로
-       * 내려보낸 시트는 아무것도 가리지 않으니 그때는 세지 않는다 — 여기서
-       * 잘못 세면 고르기로 들어갈 때 캠퍼스가 화면 위로 밀려 사라진다.
+       * 화면 밖으로 내보낸 시트(기둥)는 아무것도 가리지 않으니 그때는 세지
+       * 않는다 — 여기서 잘못 세면 고르기로 들어갈 때 캠퍼스가 한쪽으로 밀려
+       * 사라진다.
        */
       const covered = sheetRef.current !== 'hidden';
       const panel = covered ? panelRef.current?.getBoundingClientRect() : null;
-      const narrow = width <= PANEL_BREAKPOINT;
-      const left = !narrow && panel ? Math.round(panel.width) + 32 : 0;
-      const bottom = narrow && panel ? Math.round(panel.height) : 0;
+      const atBottom = panelAtRef.current === 'bottom';
+      const left = !atBottom && panel ? Math.round(panel.width) + 32 : 0;
+      const bottom = atBottom && panel ? Math.round(panel.height) : 0;
 
       /*
        * 여백이 화면을 다 먹으면 fitBounds 가 최대 배율로 튄다. 남길 자리를 지킨다.
        *
-       * 남기는 양은 고정 픽셀이 아니라 비율이다. 폰에서 시트를 펼치면 아래가
-       * 화면의 3/4 을 물기 때문에, 96px 만 남기면 캠퍼스가 실오라기 같은 띠에
-       * 눌려 들어가 한참 축소된 배율로 잡힌다. 절반쯤은 지도에 남겨 둔다.
+       * 남기는 양은 고정 픽셀이 아니라 비율이다. 세로 폰에서 시트를 펼치면
+       * 아래가 화면의 3/4 을 물기 때문에, 96px 만 남기면 캠퍼스가 실오라기
+       * 같은 띠에 눌려 들어가 한참 축소된 배율로 잡힌다. 절반쯤은 남겨 둔다.
        */
       const cap = (value: number, limit: number) =>
         Math.max(0, Math.min(value, limit * 0.55));
@@ -230,18 +248,47 @@ const CampusMap = ({
      * 바로 한 번 맞추고, 스타일이 늦게 붙는 경우를 위해 다음 프레임에 한 번 더
      * 맞춘다. 그 뒤로는 창 크기가 바뀔 때만 손댄다.
      */
-    let wasNarrow = (holder.current?.clientWidth ?? 0) <= PANEL_BREAKPOINT;
-
     fit();
     const firstFrame = requestAnimationFrame(fit);
 
+    /*
+     * 폰을 돌렸을 때.
+     *
+     * Leaflet 이 들고 있는 크기는 창이 바뀔 때마다 새로 잡아 준다. 다만 보던
+     * 자리를 다시 맞추는 것은 가로세로가 뒤집혔을 때뿐이다 — 세로에 맞춰 잡아
+     * 둔 배율을 납작한 화면에 그대로 쓰면 캠퍼스가 위아래로 잘린다. 사람이
+     * 손으로 넓혀 본 화면은 그대로 둔다.
+     */
+    const shapeOf = () =>
+      (holder.current?.clientWidth ?? 0) >= (holder.current?.clientHeight ?? 0)
+        ? 'landscape'
+        : 'portrait';
+
+    const refit = () => {
+      /* 걷는 중에는 캠퍼스가 아니라 발밑을 봐야 한다. */
+      if (followRef.current) {
+        const at = hereRef.current;
+        if (at) instance.panTo(toLeaflet(at), { animate: false });
+        return;
+      }
+      fitPoints(lastFit.current ?? [...nodesRef.current.values()]);
+    };
+
+    let shape = shapeOf();
+    let settle = 0;
+
     const onResize = () => {
-      const narrow = (holder.current?.clientWidth ?? 0) <= PANEL_BREAKPOINT;
       instance.invalidateSize({ animate: false });
-      /* 패널이 옆에서 아래로 옮겨 갈 때만 다시 맞춘다. 사람이 옮긴 화면은 둔다. */
-      if (narrow === wasNarrow) return;
-      wasNarrow = narrow;
-      fit();
+      const now = shapeOf();
+      if (now === shape) return;
+      shape = now;
+      /*
+       * 돌린 직후에 읽는 크기는 아직 돌기 전 것일 수 있다(iOS). 지금 한 번
+       * 맞추고, 자리가 잡히는 다음 프레임에 한 번 더 맞춘다.
+       */
+      refit();
+      cancelAnimationFrame(settle);
+      settle = requestAnimationFrame(refit);
     };
     window.addEventListener('resize', onResize);
 
@@ -249,6 +296,7 @@ const CampusMap = ({
 
     return () => {
       cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(settle);
       window.removeEventListener('resize', onResize);
       instance.remove();
       map.current = null;
@@ -271,7 +319,7 @@ const CampusMap = ({
     const all = [...nodesRef.current.values()];
     if (picking) fitTo.current(all, false);
     else fitTo.current(lastFit.current ?? all);
-  }, [sheet, follow, picking]);
+  }, [sheet, follow, picking, panelAt]);
 
   /*
    * 안내를 켜면 걷기 좋은 배율로 한 번 당긴다.

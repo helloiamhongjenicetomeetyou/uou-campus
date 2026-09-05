@@ -169,7 +169,7 @@ const PlacePicker = ({
             {group.kind && (
               <h3 className={s.group}>{GROUP_LABEL[group.kind]}</h3>
             )}
-            <ul>
+            <ul className={s.rows}>
               {group.items.map((node) => {
                 const isTaken = taken?.id === node.id;
                 return (

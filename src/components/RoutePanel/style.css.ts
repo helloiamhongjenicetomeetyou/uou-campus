@@ -1,13 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import {
-  elevation,
-  flex,
-  font,
-  layout,
-  screen,
-  spacing,
-  theme,
-} from '@/styles';
+import { elevation, flex, font, layout, media, spacing, theme } from '@/styles';
 
 export const panel = style([
   flex.COLUMN_FLEX,
@@ -26,7 +18,7 @@ export const panel = style([
 
     '@media': {
       /* 좁은 화면에서는 아래에서 올라오는 시트가 된다. 지도를 덜 가리려고. */
-      [`screen and (max-width: ${screen.phone})`]: {
+      [media.SHEET]: {
         top: 'auto',
         bottom: 0,
         left: 0,
@@ -40,6 +32,30 @@ export const panel = style([
         paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         borderRadius: `${layout.radius.md} ${layout.radius.md} 0 0`,
         borderBottom: 'none',
+      },
+
+      /*
+       * 가로로 돌린 폰에서는 왼쪽에 세우는 기둥이 된다.
+       *
+       * 같은 시트를 그대로 올리면 화면 높이 375px 중 285px 을 물어 지도에
+       * 90px 만 남는다 — 캠퍼스가 한 줄로 눌린다. 가로에서는 폭이 남으니
+       * 옆을 내주고, 지도에 정사각형에 가까운 자리를 남긴다.
+       *
+       * 노치는 세로로 들 때 위에 있지만 가로에서는 왼쪽이나 오른쪽으로 온다.
+       * 기둥이 붙는 왼쪽 여백을 따로 챙긴다.
+       */
+      [media.RAIL]: {
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 'auto',
+        width: layout.railWidth,
+        maxHeight: 'none',
+        paddingTop: 'env(safe-area-inset-top, 0px)',
+        paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+        paddingLeft: 'env(safe-area-inset-left, 0px)',
+        borderRadius: `0 ${layout.radius.md} ${layout.radius.md} 0`,
+        borderLeft: 'none',
       },
     },
   },
@@ -55,9 +71,14 @@ export const panelHidden = style([
   panel,
   {
     '@media': {
-      [`screen and (max-width: ${screen.phone})`]: {
+      [media.SHEET]: {
         transform: 'translateY(105%)',
         /* 내려간 시트가 지도 손짓을 가로채면 곤란하다. */
+        pointerEvents: 'none',
+      },
+      /* 기둥은 아래가 아니라 옆으로 빠진다. 나가는 방향만 다르고 뜻은 같다. */
+      [media.RAIL]: {
+        transform: 'translateX(-105%)',
         pointerEvents: 'none',
       },
     },
@@ -243,7 +264,25 @@ export const phoneSwap = style([
 /** 손잡이 아래 나머지 전부. 시트를 접으면 이 덩이가 0 으로 눌린다. */
 export const body = style([
   flex.COLUMN_FLEX,
-  { flex: 1, minHeight: 0, overflow: 'hidden' },
+  {
+    flex: 1,
+    minHeight: 0,
+    overflow: 'hidden',
+
+    '@media': {
+      /*
+       * 기둥에서는 안내 목록만 따로 구르지 않고 기둥 전체가 구른다.
+       *
+       * 높이가 390px 밖에 없어, 제목·칸·기준을 고정해 두면 목록에 남는 자리가
+       * 한 줄도 안 된다. 위에서 아래로 쭉 미는 편이 읽힌다.
+       */
+      [media.RAIL]: {
+        overflowY: 'auto',
+        overscrollBehavior: 'contain',
+        WebkitOverflowScrolling: 'touch',
+      },
+    },
+  },
 ]);
 
 export const header = style([
@@ -339,6 +378,15 @@ export const result = style({
   minHeight: 0,
   overflowY: 'auto',
   overscrollBehavior: 'contain',
+
+  '@media': {
+    /* 기둥에서는 바깥(body)이 구른다. 안쪽까지 구르면 스크롤이 둘로 갈린다. */
+    [media.RAIL]: {
+      flex: '0 0 auto',
+      minHeight: 'auto',
+      overflowY: 'visible',
+    },
+  },
 });
 
 export const empty = style([
