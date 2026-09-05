@@ -24,13 +24,7 @@ self.addEventListener('install', (event) => {
     caches
       .open(SHELL)
       .then((cache) =>
-        cache.addAll([
-          '/',
-          '/manifest.webmanifest',
-          '/icon.svg',
-          /* 한글은 이 글꼴로 떨어진다. 신호가 죽은 자리에서도 글씨는 제 모양이게. */
-          '/fonts/pretendard-subset-v1.woff2',
-        ]),
+        cache.addAll(['/', '/manifest.webmanifest', '/icon.svg']),
       )
       .then(() => self.skipWaiting()),
   );
@@ -73,8 +67,8 @@ const handleNavigation = async (request) => {
 };
 
 /**
- * 이름이 내용을 담보하는 파일 — 빌드 산출물(해시)과 글꼴(판 번호).
- * 내용이 바뀌면 이름도 바뀌므로, 있으면 다시 물어보지 않고 그대로 쓴다.
+ * 빌드 산출물: 이름에 해시가 붙어 내용이 바뀌면 이름도 바뀐다. 본문 글꼴도
+ * 여기로 나온다. 있으면 다시 물어보지 않고 그대로 쓴다.
  */
 const handleImmutable = async (request) => {
   const cache = await caches.open(ASSETS);
@@ -154,7 +148,7 @@ self.addEventListener('fetch', (event) => {
 
   if (url.origin === self.location.origin) {
     event.respondWith(
-      url.pathname.startsWith('/assets/') || url.pathname.startsWith('/fonts/')
+      url.pathname.startsWith('/assets/')
         ? handleImmutable(request)
         : handleRevalidate(request),
     );
