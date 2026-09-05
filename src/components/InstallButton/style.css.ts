@@ -1,13 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import {
-  elevation,
-  flex,
-  font,
-  layout,
-  screen,
-  spacing,
-  theme,
-} from '@/styles';
+import { elevation, flex, font, layout, media, spacing, theme } from '@/styles';
 
 /*
  * 지도 오른쪽 위에 따로 서는 설치 단추.
@@ -31,9 +23,14 @@ export const holder = style([
     pointerEvents: 'none',
 
     '@media': {
-      [`screen and (max-width: ${screen.phone})`]: {
+      [media.SHEET]: {
         top: `calc(${spacing.sm} + env(safe-area-inset-top, 0px))`,
         right: spacing.sm,
+      },
+      /* 가로로 돌리면 노치가 오른쪽으로 올 수 있다. 그 폭만큼 안으로 들어온다. */
+      [media.RAIL]: {
+        top: `calc(${spacing.sm} + env(safe-area-inset-top, 0px))`,
+        right: `calc(${spacing.sm} + env(safe-area-inset-right, 0px))`,
       },
     },
   },

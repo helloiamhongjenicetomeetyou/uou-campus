@@ -10,7 +10,7 @@ import { nearestNode } from '@/routing/graph';
 import { useCampusDoc } from '@/hooks/useCampusDoc';
 import { useGeolocation } from '@/hooks/useGeolocation';
 import { useWalkSimulator } from '@/hooks/useWalkSimulator';
-import { usePhone } from '@/hooks/useMediaQuery';
+import { useLandscape, usePhone } from '@/hooks/useMediaQuery';
 import { ARRIVED_METERS, trackProgress } from '@/routing/progress';
 import { landmarkNear, toDirections } from '@/routing/directions';
 import { useInstall } from '@/hooks/useInstall';
@@ -58,6 +58,15 @@ const App = () => {
   const install = useInstall();
   const [simulating] = useState(readSimFlag);
   const phone = usePhone();
+  const landscape = useLandscape();
+
+  /*
+   * 손에 들고 쓰는 화면. 곳은 칸 밑 드롭다운이 아니라 전체 화면 목록에서 고른다.
+   *
+   * 세로로 든 폰은 좁아서, 가로로 돌린 폰은 납작해서 — 이유는 달라도 여덟 줄
+   * 드롭다운을 펼칠 자리가 없는 것은 같다. 키보드까지 올라오면 더 그렇다.
+   */
+  const handheld = phone || landscape;
 
   /* 지도가 패널에 가린 만큼을 피해 캠퍼스를 맞출 수 있게 패널을 가리켜 둔다. */
   const panelRef = useRef<HTMLElement>(null);
@@ -438,6 +447,8 @@ const App = () => {
         accuracy={liveAccuracy}
         progress={progress}
         panelRef={panelRef}
+        /* 패널이 어느 쪽을 가리는지. 시트는 아래, 옆에 선 패널·기둥은 왼쪽. */
+        panelAt={phone ? 'bottom' : 'left'}
         sheet={sheet}
         follow={guiding}
         picking={picking !== null}
@@ -486,6 +497,7 @@ const App = () => {
         simulator={simulating ? simulator : null}
         panelRef={panelRef}
         phone={phone}
+        landscape={landscape}
         sheet={sheet}
         guiding={guiding}
         onChangeFrom={(node) => setFromId(node?.id ?? null)}
@@ -499,7 +511,7 @@ const App = () => {
         onStopGuide={stopGuide}
       />
 
-      {phone && picker && (
+      {handheld && picker && (
         <PlacePicker
           field={picker}
           places={graph.places}

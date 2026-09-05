@@ -55,8 +55,10 @@ interface Props {
   simulator: React.ComponentProps<typeof Progress>['simulator'];
   /** 지도가 패널에 가린 만큼을 피해 캠퍼스를 맞추려고 크기를 재 간다. */
   panelRef: RefObject<HTMLElement | null>;
-  /** 좁은 화면인지. 장소를 고르는 방식이 아예 달라진다. */
+  /** 세로로 든 폰인지. 아래에서 올라오는 시트로 접고 펼 수 있다. */
   phone: boolean;
+  /** 가로로 돌린 폰인지. 시트 대신 왼쪽 기둥으로 선다. */
+  landscape: boolean;
   sheet: SheetState;
   guiding: boolean;
   onChangeFrom: (node: CampusNode | null) => void;
@@ -99,6 +101,7 @@ const RoutePanel = ({
   simulator,
   panelRef,
   phone,
+  landscape,
   sheet,
   guiding,
   onChangeFrom,
@@ -120,6 +123,14 @@ const RoutePanel = ({
   const unreachable = Boolean(from && to && from.id !== to.id && !route);
   const hasRoute = Boolean(route && route.legs.length > 0);
   const collapsed = phone && sheet === 'collapsed';
+
+  /*
+   * 손에 들고 쓰는 화면. 곳은 전체 화면 목록에서 고른다.
+   *
+   * 세로든 가로든 칸 밑에 여덟 줄 드롭다운을 펼칠 자리가 없다 — 세로는 시트가
+   * 좁아서, 가로는 화면이 납작해서. 키보드까지 올라오면 남는 게 없다.
+   */
+  const handheld = phone || landscape;
 
   /*
    * 접었을 때 남길 높이.
@@ -279,11 +290,8 @@ const RoutePanel = ({
           </button>
         </header>
 
-        {/*
-         * 폰에서는 칸을 누르면 전체 화면 목록이 뜬다. 좁은 시트 안에 여덟 줄
-         * 드롭다운을 밀어 넣으면 키보드가 올라오는 순간 아무것도 안 보인다.
-         */}
-        {phone ? (
+        {/* 폰에서는 칸을 누르면 전체 화면 목록이 뜬다. */}
+        {handheld ? (
           <div className={s.phoneFields}>
             <div className={s.phoneStack}>
               <button
@@ -365,7 +373,7 @@ const RoutePanel = ({
           )}
         </div>
 
-        {/* 넓은 화면에는 접히는 시트가 없다. 그래서 같은 단추를 여기에 둔다. */}
+        {/* 접히는 시트가 없는 화면에는 손잡이도 없다. 같은 단추를 여기에 둔다. */}
         {!phone && hasRoute && (
           <div className={s.startRow}>
             <button

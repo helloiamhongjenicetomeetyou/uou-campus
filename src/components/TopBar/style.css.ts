@@ -1,20 +1,12 @@
 import { style } from '@vanilla-extract/css';
-import {
-  elevation,
-  flex,
-  font,
-  layout,
-  screen,
-  spacing,
-  theme,
-} from '@/styles';
+import { elevation, flex, font, layout, media, spacing, theme } from '@/styles';
 
 /*
  * 지도 위쪽에 걸리는 띠. 걸으면서 보는 안내와, 지도에서 곳을 고르는 중이라는
  * 알림이 같은 자리를 쓴다. 둘이 같이 뜨는 일은 없다.
  *
- * 폰에서는 화면 위에 딱 붙여 노치 밑으로 흘려 넣고, 넓은 화면에서는 왼쪽
- * 길찾기 패널을 비켜 앉는다.
+ * 세로로 든 폰에서는 화면 위에 딱 붙여 노치 밑으로 흘려 넣고, 그 밖에는 왼쪽
+ * 길찾기 패널(넓은 화면의 패널이든 가로 폰의 기둥이든)을 비켜 앉는다.
  */
 const bar = style([
   flex.COLUMN_FLEX,
@@ -33,7 +25,7 @@ const bar = style([
     boxShadow: elevation.overlay,
 
     '@media': {
-      [`screen and (max-width: ${screen.phone})`]: {
+      [media.SHEET]: {
         top: 0,
         left: 0,
         right: 0,
@@ -41,6 +33,18 @@ const bar = style([
         paddingTop: `calc(12px + env(safe-area-inset-top, 0px))`,
         borderRadius: `0 0 ${layout.radius.md} ${layout.radius.md}`,
         borderTop: 'none',
+      },
+
+      /*
+       * 가로로 돌린 폰. 위아래가 모자라니 위 여백을 줄이고, 왼쪽 기둥이
+       * 물고 있는 만큼만 비켜서 남는 폭을 다 쓴다. 가로에서는 노치가 옆으로
+       * 오므로 오른쪽 여백도 챙긴다.
+       */
+      [media.RAIL]: {
+        top: spacing.sm,
+        left: `calc(${layout.railWidth} + ${spacing.sm})`,
+        right: `calc(${spacing.sm} + env(safe-area-inset-right, 0px))`,
+        maxWidth: 'none',
       },
     },
   },
@@ -56,7 +60,17 @@ export const lost = style([
 
 export const pick = style([
   bar,
-  { borderColor: theme.accent, backgroundColor: theme.accentSoft },
+  {
+    borderColor: theme.accent,
+    backgroundColor: theme.accentSoft,
+
+    '@media': {
+      /* 지도에서 고르는 중에는 기둥이 화면 밖에 있다. 그 자리를 비워 둘 이유가 없다. */
+      [media.RAIL]: {
+        left: `calc(${spacing.sm} + env(safe-area-inset-left, 0px))`,
+      },
+    },
+  },
 ]);
 
 export const head = style([flex.VERTICAL, { gap: '10px' }]);
