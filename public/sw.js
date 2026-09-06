@@ -9,7 +9,7 @@
  * 껍데기만 미리 담고 나머지는 처음 받을 때 담는다.
  */
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = `campus-shell-${VERSION}`;
 const ASSETS = `campus-assets-${VERSION}`;
 const TILES = `campus-tiles-${VERSION}`;
@@ -67,7 +67,8 @@ const handleNavigation = async (request) => {
 };
 
 /**
- * 빌드 산출물: 이름에 해시가 붙어 내용이 바뀌면 이름도 바뀐다. 있으면 그대로 쓴다.
+ * 빌드 산출물: 이름에 해시가 붙어 내용이 바뀌면 이름도 바뀐다. 본문 글꼴도
+ * 여기로 나온다. 있으면 다시 물어보지 않고 그대로 쓴다.
  */
 const handleImmutable = async (request) => {
   const cache = await caches.open(ASSETS);
